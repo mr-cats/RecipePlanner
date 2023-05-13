@@ -13,6 +13,7 @@ const second = new Item("Second", "A unit of time equal to 1/60th of a minute.")
 // base resources
 const aggristone = new Item("Aggristone", "A resource that can be found in Duviri.");
 const alloy_plate = new Item("Alloy Plate", "A common component that can be found on Venus, Jupiter, Sedna, and Ceres.");
+const anomaly_shard = new Item("Anomaly Shard", "A resource that can be found in the Veil Proxima by clearing a Murex of Sentients.");
 const argon_crystal = new Item("Argon Crystal", "A rare crystal formed in the Origin System's void.");
 const ariette_scale = new Item("Ariette Scale", "A resource that can be found by feeding the maw in Duviri.");
 const breath_of_the_eidolon = new Item("Breath of the Eidolon", "A resource that can be obtained from Ostron bounties.");
@@ -86,6 +87,7 @@ const damaged_necramech_weapon_receiver = new Item("Damaged Necramech Weapon Rec
 const damaged_necramech_weapon_stock = new Item("Damaged Necramech Weapon Stock", "Reward from Isolation Vault Bounties Rotation C.");
 
 const intact_sentient_core = new Item("Intact Sentient Core", "A component dropped by Sentients.");
+const exceptional_sentient_core = new Item("Exceptional Sentient Core", "A component dropped by Sentients.");
 const eidolon_shard = new Item("Eidolon Shard", "A component dropped by Teralysts, Gantulysts, and Hydrolysts.");
 
 const atmo_systems = new Item("Atmo Systems", "Obtainable from Heist Bounties or Little Duck.");
@@ -112,6 +114,8 @@ const ventkids = new Item("Ventkids Standing", "Standing acquired from the Ventk
 const mother_token = new Item("Mother Token", "A currency used to purchase items from Mother.");
 const grandmother_token = new Item("Grandmother Token", "A currency used to purchase items from Grandmother.");
 
+const stock = new Item("Kahl Stock", "A currency used to purchase items from Kahl.");
+
 // things you have to buy from certain vendors
 
 const seriglass_shard = new Item("Seriglass Shard", "A component purchased from Grandmother.");
@@ -134,12 +138,14 @@ const ferros = new Item("Ferros", "A mineral found in the Plains of Eidolon.");
 const goblite = new Item("Goblite", "A mineral found in the Orb Vallis.");
 const heciphron = new Item("Heciphron", "A gem found in the Cambion Drift.");
 const hesperon = new Item("Hesperon", "A mineral found in the Orb Vallis.");
+const iradite = new Item("Iradite", "A mineral found in the Plains of Eidolon.");
 const namalon = new Item("Namalon", "A gem found in the Cambion Drift.");
 const necrathene = new Item("Necrathene", "A gem found in the Cambion Drift.");
 const noctrul = new Item("Noctrul", "A gem found in the Orb Vallis.");
 const pyrol = new Item("Pyrol", "A mineral found in the Plains of Eidolon.");
 const travoride = new Item("Travoride", "A gem found in the Orb Vallis.");
 const venerol = new Item("Venerol", "A mineral found in the Orb Vallis.");
+const veridos = new Item("Veridos", "A gem found in the Plains of Eidolon.");
 const xenorhast = new Item("Xenorhast", "A gem found in the Cambion Drift.");
 const zodian = new Item("Zodian", "A gem found in the Orb Vallis.");
 
@@ -226,6 +232,12 @@ const craft_hespazym_alloy = new Recipe("Craft Hespazym Alloy", "Reusable Bluepr
     .addInput(plastids, 300)
     .addInput(morphics, 2)
     .addOutput(hespazym_alloy, 20);
+
+const marquise_veridos = new Item("Marquise Veridos", "A resource crafted from veridos.");
+const craft_marquise_veridos = new Recipe("Craft Marquise Veridos", "Reusable Blueprint from Old Man Suumbaat at Rank 2.")
+    .addInput(veridos, 10)
+    .addInput(credits, 2500)
+    .addOutput(marquise_veridos, 10);
 
 const purged_dagonic = new Item("Purged Dagonic", "A resource crafted from dagonic.");
 const craft_purged_dagonic = new Recipe("Craft Purged Dagonic", "Reusable Blueprint from Otak at rank 0.")
@@ -318,6 +330,14 @@ const flagellocanth_small = new Item("Flagellocanth (Small)", "A fish found in t
 const flagellocanth_medium = new Item("Flagellocanth (Medium)", "A fish found in the Cambion Drift.");
 const flagellocanth_large = new Item("Flagellocanth (Large)", "A fish found in the Cambion Drift.");
 
+const glutinox_small = new Item("Glutinox (Small)", "A fish found in the Cambion Drift.");
+const glutinox_medium = new Item("Glutinox (Medium)", "A fish found in the Cambion Drift.");
+const glutinox_large = new Item("Glutinox (Large)", "A fish found in the Cambion Drift.");
+
+const kymaeros_small = new Item("Kymaeros (Small)", "A fish found in the Cambion Drift.");
+const kymaeros_medium = new Item("Kymaeros (Medium)", "A fish found in the Cambion Drift.");
+const kymaeros_large = new Item("Kymaeros (Large)", "A fish found in the Cambion Drift.");
+
 const lobostriscid_small = new Item("Lobostriscid (Small)", "A fish found in the Cambion Drift.");
 const lobostriscid_medium = new Item("Lobostriscid (Medium)", "A fish found in the Cambion Drift.");
 const lobostriscid_large = new Item("Lobostriscid (Large)", "A fish found in the Cambion Drift.");
@@ -329,6 +349,18 @@ const longwinder_magnificent = new Item("Longwinder (Magnificent)", "A servofish
 const mawfish_small = new Item("Mawfish (Small)", "A fish found in the Plains of Eidolon.");
 const mawfish_medium = new Item("Mawfish (Medium)", "A fish found in the Plains of Eidolon.");
 const mawfish_large = new Item("Mawfish (Large)", "A fish found in the Plains of Eidolon.");
+
+const mortus_lungfish_small = new Item("Mortus Lungfish (Small)", "A fish found in the Plains of Eidolon.");
+const mortus_lungfish_medium = new Item("Mortus Lungfish (Medium)", "A fish found in the Plains of Eidolon.");
+const mortus_lungfish_large = new Item("Mortus Lungfish (Large)", "A fish found in the Plains of Eidolon."); 
+
+const myxostomata_basic = new Item("Myxostomata (Basic)", "A servofish found in the Cambion Drift.");
+const myxostomata_adorned = new Item("Myxostomata (Adorned)", "A servofish found in the Cambion Drift.");
+const myxostomata_magnificent = new Item("Myxostomata (Magnificent)", "A servofish found in the Cambion Drift.");
+
+const ostimyr_basic = new Item("Ostimyr (Basic)", "A servofish found in the Cambion Drift.");
+const ostimyr_adorned = new Item("Ostimyr (Adorned)", "A servofish found in the Cambion Drift.");
+const ostimyr_magnificent = new Item("Ostimyr (Magnificent)", "A servofish found in the Cambion Drift.");
 
 const synathid_basic = new Item("Synathid (Basic)", "A servofish found in the Orb Vallis.");
 const synathid_adorned = new Item("Synathid (Adorned)", "A servofish found in the Orb Vallis.");
@@ -351,6 +383,7 @@ const vitreospina_magnificent = new Item("Vitreospina (Magnificent)", "A fish fo
 const benign_infested_tumor = new Item("Benign Infested Tumor", "A resource acquired from cutting all Deimos fish.");
 const biotic_filter = new Item("Biotic Filter", "A resource acquired from cutting some Deimos fish.");
 const charamote_sagan_module = new Item("Charamote Sagan Module", "A resource acquired from cutting Charamote.");
+const cranial_foremount = new Item("Cranial Foremount", "A resource acquired from cutting Myxostomata.");
 const dendrite_blastoma = new Item("Dendrite Blastoma", "A resource acquired from cutting some Deimos fish.");
 const ferment_bladder = new Item("Ferment Bladder", "A resource acquired from cutting some Deimos fish.");
 const fish_meat = new Item("Fish Meat", "A resource acquired from cutting all Plains of Eidolon fish.");
@@ -358,11 +391,14 @@ const fish_oil = new Item("Fish Oil", "A resource acquired from cutting all Plai
 const fish_scales = new Item("Fish Scales", "A resource acquired from cutting all Plains of Eidolon fish.");
 const longwinder_lathe_coagulant = new Item("Longwinder Lathe Coagulant", "A resource acquired from cutting Longwinder.");
 const mawfish_bones = new Item("Mawfish Bones", "A resource acquired from cutting Mawfish.");
+const mortus_horn = new Item("Mortus Horn", "A resource acquired from cutting Mortus Lungfish.");
 const ocular_stem_root = new Item("Ocular Stem Root", "A resource acquired from cutting flagellocanth.");
 const parasitic_tethermaw = new Item("Parasitic Tethermaw", "A resource acquired from cutting Lobostriscid.");
 const pustulent_cognitive_nodule = new Item("Pustulent Cognitive Nodule", "A resource acquired from cutting some Deimos fish.");
+const saturated_muscle_mass = new Item("Saturated Muscle Mass", "A resource acquired from cutting some Deimos fish.");
 const scrap = new Item("Scrap", "A resource acquired from cutting Servofish.");
 const spinal_core_section = new Item("Spinal Core Section", "A resource acquired from cutting some Deimos fish.");
+const sporulate_sac = new Item("Sporulate Sac", "A resource acquired from cutting Glutinox.");
 const synathid_ecosynth_analyzer = new Item("Synathid Ecosynth Analyzer", "A resource acquired from cutting Synathid.");
 const tink_dissipator_coil = new Item("Tink Dissipator Coil", "A resource acquired from cutting Tink.");
 const tromyzon_entroplasma = new Item("Tromyzon Entroplasma", "A resource acquired from cutting Tromyzon.");
@@ -486,6 +522,38 @@ const cut_flagellocanth_large = new Recipe("Cut Flagellocanth (Large)", "Cut a F
     .addOutput(ferment_bladder, 6)
     .addOutput(ocular_stem_root, 1);
 
+const cut_glutinox_small = new Recipe("Cut Glutinox (Small)", "Cut a Glutinox (Small) into parts.")
+    .addInput(glutinox_small, 1)
+    .addOutput(benign_infested_tumor, 2)
+    .addOutput(ferment_bladder, 2)
+    .addOutput(sporulate_sac, 1);
+const cut_glutinox_medium = new Recipe("Cut Glutinox (Medium)", "Cut a Glutinox (Medium) into parts.")
+    .addInput(glutinox_medium, 1)
+    .addOutput(benign_infested_tumor, 4)
+    .addOutput(ferment_bladder, 4)
+    .addOutput(sporulate_sac, 1);
+const cut_glutinox_large = new Recipe("Cut Glutinox (Large)", "Cut a Glutinox (Large) into parts.")
+    .addInput(glutinox_large, 1)
+    .addOutput(benign_infested_tumor, 6)
+    .addOutput(ferment_bladder, 6)
+    .addOutput(sporulate_sac, 1);
+
+const cut_kymaeros_small = new Recipe("Cut Kymaeros (Small)", "Cut a Kymaeros (Small) into parts.")
+    .addInput(kymaeros_small, 1)
+    .addOutput(benign_infested_tumor, 2)
+    .addOutput(ferment_bladder, 2)
+    .addOutput(saturated_muscle_mass, 1);
+const cut_kymaeros_medium = new Recipe("Cut Kymaeros (Medium)", "Cut a Kymaeros (Medium) into parts.")
+    .addInput(kymaeros_medium, 1)
+    .addOutput(benign_infested_tumor, 3)
+    .addOutput(ferment_bladder, 3)
+    .addOutput(saturated_muscle_mass, 1);
+const cut_kymaeros_large = new Recipe("Cut Kymaeros (Large)", "Cut a Kymaeros (Large) into parts.")
+    .addInput(kymaeros_large, 1)
+    .addOutput(benign_infested_tumor, 6)
+    .addOutput(ferment_bladder, 6)
+    .addOutput(saturated_muscle_mass, 1);
+
 const cut_lobostriscid_small = new Recipe("Cut Lobostriscid (Small)", "Cut a Lobostriscid (Small) into parts.")
     .addInput(lobostriscid_small, 1)
     .addOutput(benign_infested_tumor, 3)
@@ -533,6 +601,60 @@ const cut_mawfish_large = new Recipe("Cut Mawfish (Large)", "Cut a Mawfish (Larg
     .addOutput(fish_oil, 4)
     .addOutput(fish_scales, 3)
     .addOutput(mawfish_bones, 1);
+
+const cut_mortus_lungfish_small = new Recipe("Cut Mortus Lungfish (Small)", "Cut a Mortus Lungfish (Small) into parts.")
+    .addInput(mortus_lungfish_small, 1)
+    .addOutput(fish_meat, 3)
+    .addOutput(fish_oil, 4)
+    .addOutput(fish_scales, 1)
+    .addOutput(mortus_horn, 1);
+const cut_mortus_lungfish_medium = new Recipe("Cut Mortus Lungfish (Medium)", "Cut a Mortus Lungfish (Medium) into parts.")
+    .addInput(mortus_lungfish_medium, 1)
+    .addOutput(fish_meat, 4)
+    .addOutput(fish_oil, 6)
+    .addOutput(fish_scales, 2)
+    .addOutput(mortus_horn, 1);
+const cut_mortus_lungfish_large = new Recipe("Cut Mortus Lungfish (Large)", "Cut a Mortus Lungfish (Large) into parts.")
+    .addInput(mortus_lungfish_large, 1)
+    .addOutput(fish_meat, 5)
+    .addOutput(fish_oil, 8)
+    .addOutput(fish_scales, 3)
+    .addOutput(mortus_horn, 1);
+
+const cut_myxostomata_basic = new Recipe("Cut Myxostomata (Basic)", "Cut a Myxostomata (Basic) into parts.")
+    .addInput(myxostomata_basic, 1)
+    .addOutput(benign_infested_tumor, 2)
+    .addOutput(tubercular_gill_system, 4)
+    .addOutput(cranial_foremount, 2);
+const cut_myxostomata_adorned = new Recipe("Cut Myxostomata (Adorned)", "Cut a Myxostomata (Adorned) into parts.")
+    .addInput(myxostomata_adorned, 1)
+    .addOutput(benign_infested_tumor, 4)
+    .addOutput(tubercular_gill_system, 6)
+    .addOutput(cranial_foremount, 2);
+const cut_myxostomata_magnificent = new Recipe("Cut Myxostomata (Magnificent)", "Cut a Myxostomata (Magnificent) into parts.")
+    .addInput(myxostomata_magnificent, 1)
+    .addOutput(benign_infested_tumor, 6)
+    .addOutput(tubercular_gill_system, 10)
+    .addOutput(cranial_foremount, 2);
+
+const cut_ostimyr_basic = new Recipe("Cut Ostimyr (Basic)", "Cut a Ostimyr (Basic) into parts.")
+    .addInput(ostimyr_basic, 1)
+    .addOutput(benign_infested_tumor, 3)
+    .addOutput(ferment_bladder, 2)
+    .addOutput(tubercular_gill_system, 2)
+    .addOutput(saturated_muscle_mass, 1);
+const cut_ostimyr_adorned = new Recipe("Cut Ostimyr (Adorned)", "Cut a Ostimyr (Adorned) into parts.")
+    .addInput(ostimyr_adorned, 1)
+    .addOutput(benign_infested_tumor, 4)
+    .addOutput(ferment_bladder, 3)
+    .addOutput(tubercular_gill_system, 3)
+    .addOutput(saturated_muscle_mass, 1);
+const cut_ostimyr_magnificent = new Recipe("Cut Ostimyr (Magnificent)", "Cut a Ostimyr (Magnificent) into parts.")
+    .addInput(ostimyr_magnificent, 1)
+    .addOutput(benign_infested_tumor, 6)
+    .addOutput(ferment_bladder, 4)
+    .addOutput(tubercular_gill_system, 4)
+    .addOutput(saturated_muscle_mass, 1);
 
 const cut_synathid_basic = new Recipe("Cut Synathid (Basic)", "Cut a Synathid (Basic) into parts.")
     .addInput(synathid_basic, 1)
@@ -663,25 +785,40 @@ const craft_forma = new Recipe("Craft Forma", "Craft a Forma from the blueprint.
 // -----------------------------
 // kill liches and sisters to get their weapons, fully built
 
-const kuva_ayanga = new Item("Kuva Ayanga", " Kuva Lich weapon.");
-const kuva_brakk = new Item("Kuva Brakk", " Kuva Lich weapon.");
-const kuva_bramma = new Item("Kuva Bramma", " Kuva Lich weapon.");
-const kuva_chakkhurr = new Item("Kuva Chakkhurr", " Kuva Lich weapon.");
-const kuva_drakgoon = new Item("Kuva Drakgoon", " Kuva Lich weapon.");
-const kuva_grattler = new Item("Kuva Grattler", " Kuva Lich weapon.");
-const kuva_hek = new Item("Kuva Hek", " Kuva Lich weapon.");
-const kuva_hind = new Item("Kuva Hind", " Kuva Lich weapon.");
-const kuva_karak = new Item("Kuva Karak", " Kuva Lich weapon.");
-const kuva_kohm = new Item("Kuva Kohm", " Kuva Lich weapon.");
-const kuva_kraken = new Item("Kuva Kraken", " Kuva Lich weapon.");
-const kuva_nukor = new Item("Kuva Nukor", " Kuva Lich weapon.");
-const kuva_ogris = new Item("Kuva Ogris", " Kuva Lich weapon.");
-const kuva_quartakk = new Item("Kuva Quartakk", " Kuva Lich weapon.");
-const kuva_seer = new Item("Kuva Seer", " Kuva Lich weapon.");
-const kuva_shildeg = new Item("Kuva Shildeg", " Kuva Lich weapon.");
-const kuva_tonkor = new Item("Kuva Tonkor", " Kuva Lich weapon.");
-const kuva_twin_stubbas = new Item("Kuva Twin Stubbas", " Kuva Lich weapon.");
-const kuva_zarr = new Item("Kuva Zarr", " Kuva Lich weapon.");
+const kuva_ayanga = new Item("Kuva Ayanga", "Kuva Lich weapon.");
+const kuva_brakk = new Item("Kuva Brakk", "Kuva Lich weapon.");
+const kuva_bramma = new Item("Kuva Bramma", "Kuva Lich weapon.");
+const kuva_chakkhurr = new Item("Kuva Chakkhurr", "Kuva Lich weapon.");
+const kuva_drakgoon = new Item("Kuva Drakgoon", "Kuva Lich weapon.");
+const kuva_grattler = new Item("Kuva Grattler", "Kuva Lich weapon.");
+const kuva_hek = new Item("Kuva Hek", "Kuva Lich weapon.");
+const kuva_hind = new Item("Kuva Hind", "Kuva Lich weapon.");
+const kuva_karak = new Item("Kuva Karak", "Kuva Lich weapon.");
+const kuva_kohm = new Item("Kuva Kohm", "Kuva Lich weapon.");
+const kuva_kraken = new Item("Kuva Kraken", "Kuva Lich weapon.");
+const kuva_nukor = new Item("Kuva Nukor", "Kuva Lich weapon.");
+const kuva_ogris = new Item("Kuva Ogris", "Kuva Lich weapon.");
+const kuva_quartakk = new Item("Kuva Quartakk", "Kuva Lich weapon.");
+const kuva_seer = new Item("Kuva Seer", "Kuva Lich weapon.");
+const kuva_shildeg = new Item("Kuva Shildeg", "Kuva Lich weapon.");
+const kuva_tonkor = new Item("Kuva Tonkor", "Kuva Lich weapon.");
+const kuva_twin_stubbas = new Item("Kuva Twin Stubbas", "Kuva Lich weapon.");
+const kuva_zarr = new Item("Kuva Zarr", "Kuva Lich weapon.");
+
+const tenet_agendus = new Item("Tenet Agendus", "Sister weapon.");
+const tenet_arca_plasmor = new Item("Tenet Arca Plasmor", "Sister weapon.");
+const tenet_cycron = new Item("Tenet Cycron", "Sister weapon.");
+const tenet_detron = new Item("Tenet Detron", "Sister weapon.");
+const tenet_diplos = new Item("Tenet Diplos", "Sister weapon.");
+const tenet_envoy = new Item("Tenet Envoy", "Sister weapon.");
+const tenet_exec = new Item("Tenet Exec", "Sister weapon.");
+const tenet_ferrox = new Item("Tenet Ferrox", "Sister weapon.");
+const tenet_flux_rifle = new Item("Tenet Flux Rifle", "Sister weapon.");
+const tenet_grigori = new Item("Tenet Grigori", "Sister weapon.");
+const tenet_livia = new Item("Tenet Livia", "Sister weapon.");
+const tenet_plinx = new Item("Tenet Plinx", "Sister weapon.");
+const tenet_spirex = new Item("Tenet Spirex", "Sister weapon.");
+const tenet_tetra = new Item("Tenet Tetra", "Sister weapon.");
 
 
 // The non prime weapons section
@@ -3983,22 +4120,22 @@ const craft_kreska = new Recipe("Craft Kreska", "Craft a Kreska from the bluepri
     .addInput(longwinder_lathe_coagulant, 20)
     .addOutput(kreska, 1);
 
-// krokhur 
+// krohkur 
 // bp market 25k
 
-const krokhur_blueprint = new Item("Krokhur Blueprint", "Blueprint obtained from the Market for 25,000 credits.");
-const buy_krokhur_blueprint = new Recipe("Buy Krokhur Blueprint", "Buy a Krokhur Blueprint from the Market for 25,000 credits.")
+const krohkur_blueprint = new Item("Krohkur Blueprint", "Blueprint obtained from the Market for 25,000 credits.");
+const buy_krohkhur_blueprint = new Recipe("Buy Krohkur Blueprint", "Buy a Krohkur Blueprint from the Market for 25,000 credits.")
     .addInput(credits, 25000)
-    .addOutput(krokhur_blueprint, 1);
-const krokhur = new Item("Krokhur", "Blueprint obtained from the Market for 25,000 credits.");
-const craft_krokhur = new Recipe("Craft Krokhur", "Craft a Krokhur from the blueprint.")
-    .addInput(krokhur_blueprint, 1)
+    .addOutput(krohkur_blueprint, 1);
+const krohkur = new Item("Krohkur", "Blueprint obtained from the Market for 25,000 credits.");
+const craft_krohkur = new Recipe("Craft Krohkur", "Craft a Krohkur from the blueprint.")
+    .addInput(krohkur_blueprint, 1)
     .addInput(credits, 20000)
     .addInput(tellurium, 5)
     .addInput(morphics, 8)
     .addInput(oxium, 125)
     .addInput(alloy_plate, 4375)
-    .addOutput(krokhur, 1);
+    .addOutput(krohkur, 1);
 
 // kulstar
 // bp market 40k
@@ -5682,14 +5819,1094 @@ const craft_simulor = new Recipe("Craft Simulor", "Craft a Simulor from the blue
     .addInput(argon_crystal, 1)
     .addOutput(simulor, 1);
 
+// sirocco
+// full weapon new war
 
+const sirocco = new Item("Sirocco", "Weapon obtained from The New War quest.");
 
+// skana
+// bp market 15k
 
+const skana_blueprint = new Item("Skana Blueprint", "Blueprint obtained from Market for 15,000 credits.");
+const buy_skana_blueprint = new Recipe("Buy Skana Blueprint", "Buy a Skana Blueprint from Market for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(skana_blueprint, 1);
+const skana = new Item("Skana", "Weapon obtained from crafting.")
+const craft_skana = new Recipe("Craft Skana", "Craft a Skana from the blueprint.")
+    .addInput(skana_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(salvage, 750)
+    .addInput(plastids, 500)
+    .addInput(alloy_plate, 1100)
+    .addInput(morphics, 3)
+    .addOutput(skana, 1);
 
+// skiajati
+// full weapon sacrifice quest
 
+const skiajati = new Item("Skiajati", "Weapon obtained from The Sacrifice quest.");
 
+// slaytra
+// bp kahls garrison 30 stock rank 2
 
-// parts recipes
+const slaytra_blueprint = new Item("Slaytra Blueprint", "Blueprint obtained from Kahl's Garrison for 30 Stock.");
+const buy_slaytra_blueprint = new Recipe("Buy Slaytra Blueprint", "Buy a Slaytra Blueprint from Kahl's Garrison for 30 Stock.")
+    .addInput(stock, 30)
+    .addOutput(slaytra_blueprint, 1);
+const slaytra = new Item("Slaytra", "Weapon obtained from crafting.")
+const craft_slaytra = new Recipe("Craft Slaytra", "Craft a Slaytra from the blueprint.")
+    .addInput(slaytra_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(alloy_plate, 13000)
+    .addInput(rubedo, 6300)
+    .addInput(kuva, 2600)
+    .addInput(tellurium, 8)
+    .addOutput(slaytra, 1);
+
+// snipetron
+
+const snipetron = new Item("Snipetron", "Go read the wiki for this one.");
+
+// snipetron vandal
+// bp and full parts invasion
+
+const snipetron_vandal_blueprint = new Item("Snipetron Vandal Blueprint", "Blueprint obtained from Invasions.");
+const snipetron_vandal_barrel = new Item("Snipetron Vandal Barrel", "Part obtained from Invasions.");
+const snipetron_vandal_receiver = new Item("Snipetron Vandal Receiver", "Part obtained from Invasions.");
+const snipetron_vandal_stock = new Item("Snipetron Vandal Stock", "Part obtained from Invasions.");
+const snipetron_vandal = new Item("Snipetron Vandal", "Weapon obtained from crafting.")
+const craft_snipetron_vandal = new Recipe("Craft Snipetron Vandal", "Craft a Snipetron Vandal from the blueprint.")
+    .addInput(snipetron_vandal_blueprint, 1)
+    .addInput(snipetron_vandal_barrel, 1)
+    .addInput(snipetron_vandal_receiver, 1)
+    .addInput(snipetron_vandal_stock, 1)
+    .addInput(credits, 25000)
+    .addOutput(snipetron_vandal, 1);
+
+// sobek
+// bp market 25k
+
+const sobek_blueprint = new Item("Sobek Blueprint", "Blueprint obtained from Market for 25,000 credits.");
+const buy_sobek_blueprint = new Recipe("Buy Sobek Blueprint", "Buy a Sobek Blueprint from Market for 25,000 credits.")
+    .addInput(credits, 25000)
+    .addOutput(sobek_blueprint, 1);
+const sobek = new Item("Sobek", "Weapon obtained from crafting.")
+const craft_sobek = new Recipe("Craft Sobek", "Craft a Sobek from the blueprint.")
+    .addInput(sobek_blueprint, 1)
+    .addInput(credits, 25000)
+    .addInput(neurodes, 5)
+    .addInput(circuits, 500)
+    .addInput(salvage, 900)
+    .addInput(polymer_bundle, 400)
+    .addOutput(sobek, 1);
+
+// soma 
+// bp market 50k
+
+const soma_blueprint = new Item("Soma Blueprint", "Blueprint obtained from Market for 50,000 credits.");
+const buy_soma_blueprint = new Recipe("Buy Soma Blueprint", "Buy a Soma Blueprint from Market for 50,000 credits.")
+    .addInput(credits, 50000)
+    .addOutput(soma_blueprint, 1);
+const soma = new Item("Soma", "Weapon obtained from crafting.")
+const craft_soma = new Recipe("Craft Soma", "Craft a Soma from the blueprint.")
+    .addInput(soma_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(morphics, 7)
+    .addInput(plastids, 850)
+    .addInput(rubedo, 1200)
+    .addInput(salvage, 8000)
+    .addOutput(soma, 1);
+
+// sonicor
+// bp market 20k
+
+const sonicor_blueprint = new Item("Sonicor Blueprint", "Blueprint obtained from Market for 20,000 credits.");
+const buy_sonicor_blueprint = new Recipe("Buy Sonicor Blueprint", "Buy a Sonicor Blueprint from Market for 20,000 credits.")
+    .addInput(credits, 20000)
+    .addOutput(sonicor_blueprint, 1);
+const sonicor = new Item("Sonicor", "Weapon obtained from crafting.")
+const craft_sonicor = new Recipe("Craft Sonicor", "Craft a Sonicor from the blueprint.")
+    .addInput(sonicor_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(alloy_plate, 6500)
+    .addInput(oxium, 600)
+    .addInput(plastids, 2600)
+    .addInput(argon_crystal, 2)
+    .addOutput(sonicor, 1);
+
+// spectra
+// bp energy lab 15k
+
+const spectra_blueprint = new Item("Spectra Blueprint", "Blueprint obtained from Energy Lab for 15,000 credits.");
+const buy_spectra_blueprint = new Recipe("Buy Spectra Blueprint", "Buy a Spectra Blueprint from Energy Lab for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(spectra_blueprint, 1);
+const spectra = new Item("Spectra", "Weapon obtained from crafting.")
+const craft_spectra = new Recipe("Craft Spectra", "Craft a Spectra from the blueprint.")
+    .addInput(spectra_blueprint, 1)
+    .addInput(credits, 25000)
+    .addInput(fieldron, 3)
+    .addInput(circuits, 700)
+    .addInput(ferrite, 5000)
+    .addInput(forma, 1)
+    .addOutput(spectra, 1);
+
+// spectra vandal
+// bp and full parts certain railjack missions
+
+const spectra_vandal_blueprint = new Item("Spectra Vandal Blueprint", "Blueprint obtained from certain Railjack missions.");
+const spectra_vandal_barrel = new Item("Spectra Vandal Barrel", "Part obtained from certain Railjack missions.");
+const spectra_vandal_receiver = new Item("Spectra Vandal Receiver", "Part obtained from certain Railjack missions.");
+const spectra_vandal_stock = new Item("Spectra Vandal Stock", "Part obtained from certain Railjack missions.");
+const spectra_vandal = new Item("Spectra Vandal", "Weapon obtained from crafting.")
+const craft_spectra_vandal = new Recipe("Craft Spectra Vandal", "Craft a Spectra Vandal from the blueprint.")
+    .addInput(spectra_vandal_blueprint, 1)
+    .addInput(spectra_vandal_barrel, 1)
+    .addInput(spectra_vandal_receiver, 1)
+    .addInput(spectra_vandal_stock, 1)
+    .addInput(credits, 25000)
+    .addOutput(spectra_vandal, 1);
+
+// spira
+// bp market 20k
+
+const spira_blueprint = new Item("Spira Blueprint", "Blueprint obtained from Market for 20,000 credits.");
+const buy_spira_blueprint = new Recipe("Buy Spira Blueprint", "Buy a Spira Blueprint from Market for 20,000 credits.")
+    .addInput(credits, 20000)
+    .addOutput(spira_blueprint, 1);
+const spira = new Item("Spira", "Weapon obtained from crafting.")
+const craft_spira = new Recipe("Craft Spira", "Craft a Spira from the blueprint.")
+    .addInput(spira_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(gallium, 5)
+    .addInput(ferrite, 2500)
+    .addInput(plastids, 800)
+    .addInput(salvage, 4000)
+    .addOutput(spira, 1);
+
+// sporothrix
+// bp and full parts isolation vaults
+
+const sporothrix_blueprint = new Item("Sporothrix Blueprint", "Blueprint obtained from Isolation Vaults.");
+const sporothrix_barrel = new Item("Sporothrix Barrel", "Part obtained from Isolation Vaults.");
+const sporothrix_receiver = new Item("Sporothrix Receiver", "Part obtained from Isolation Vaults.");
+const sporothrix_stock = new Item("Sporothrix Stock", "Part obtained from Isolation Vaults.");
+const sporothrix = new Item("Sporothrix", "Weapon obtained from crafting.")
+const craft_sporothrix = new Recipe("Craft Sporothrix", "Craft a Sporothrix from the blueprint.")
+    .addInput(sporothrix_blueprint, 1)
+    .addInput(sporothrix_barrel, 1)
+    .addInput(sporothrix_receiver, 1)
+    .addInput(sporothrix_stock, 1)
+    .addInput(credits, 20000)
+    .addInput(cranial_foremount, 2)
+    .addOutput(sporothrix, 1);
+
+// stahlta
+// bp jackal
+// full parts granum void
+
+const stahlta_blueprint = new Item("Stahlta Blueprint", "Blueprint obtained from Jackal.");
+const stahlta_barrel = new Item("Stahlta Barrel", "Part obtained from Nightmare Granum Void C Rotation.");
+const stahlta_receiver = new Item("Stahlta Receiver", "Part obtained from Granum Void C Rotation.");
+const stahlta_stock = new Item("Stahlta Stock", "Part obtained from Extended Granum Void C Rotation.");
+const stahlta = new Item("Stahlta", "Weapon obtained from crafting.")
+const craft_stahlta = new Recipe("Craft Stahlta", "Craft a Stahlta from the blueprint.")
+    .addInput(stahlta_blueprint, 1)
+    .addInput(stahlta_barrel, 1)
+    .addInput(stahlta_receiver, 1)
+    .addInput(stahlta_stock, 1)
+    .addInput(credits, 30000)
+    .addOutput(stahlta, 1);
+
+// staticor
+// bp energy lab 50k
+
+const staticor_blueprint = new Item("Staticor Blueprint", "Blueprint obtained from Energy Lab for 50,000 credits.");
+const buy_staticor_blueprint = new Recipe("Buy Staticor Blueprint", "Buy a Staticor Blueprint from Energy Lab for 50,000 credits.")
+    .addInput(credits, 50000)
+    .addOutput(staticor_blueprint, 1);
+const staticor = new Item("Staticor", "Weapon obtained from crafting.")
+const craft_staticor = new Recipe("Craft Staticor", "Craft a Staticor from the blueprint.")
+    .addInput(staticor_blueprint, 1)
+    .addInput(credits, 25000)
+    .addInput(fieldron, 10)
+    .addInput(alloy_plate, 6000)
+    .addInput(ferrite, 9000)
+    .addInput(nitain, 3)
+    .addOutput(staticor, 1);
+
+// steflos
+// bp and full parts mirror defense
+
+const steflos_blueprint = new Item("Steflos Blueprint", "Blueprint obtained from Mirror Defense.");
+const steflos_barrel = new Item("Steflos Barrel", "Part obtained from Mirror Defense.");
+const steflos_receiver = new Item("Steflos Receiver", "Part obtained from Mirror Defense.");
+const steflos_stock = new Item("Steflos Stock", "Part obtained from Mirror Defense.");
+const steflos = new Item("Steflos", "Weapon obtained from crafting.")
+const craft_steflos = new Recipe("Craft Steflos", "Craft a Steflos from the blueprint.")
+    .addInput(steflos_blueprint, 1)
+    .addInput(steflos_barrel, 1)
+    .addInput(steflos_receiver, 1)
+    .addInput(steflos_stock, 1)
+    .addInput(credits, 20000)
+    .addInput(neurodes, 4)
+    .addOutput(steflos, 1);
+
+// stradavar
+// bp market 20k
+
+const stradavar_blueprint = new Item("Stradavar Blueprint", "Blueprint obtained from Market for 20,000 credits.");
+const buy_stradavar_blueprint = new Recipe("Buy Stradavar Blueprint", "Buy a Stradavar Blueprint from Market for 20,000 credits.")
+    .addInput(credits, 20000)
+    .addOutput(stradavar_blueprint, 1);
+const stradavar = new Item("Stradavar", "Weapon obtained from crafting.")
+const craft_stradavar = new Recipe("Craft Stradavar", "Craft a Stradavar from the blueprint.")
+    .addInput(stradavar_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(ferrite, 15000)
+    .addInput(polymer_bundle, 8000)
+    .addInput(neural_sensor, 3)
+    .addInput(argon_crystal, 2)
+    .addOutput(stradavar, 1);
+
+// stropha
+// bp jackal
+// full parts granum void
+
+const stropha_blueprint = new Item("Stropha Blueprint", "Blueprint obtained from Jackal.");
+const stropha_barrel = new Item("Stropha Barrel", "Part obtained from Granum Void C Rotation.");
+const stropha_receiver = new Item("Stropha Receiver", "Part obtained from Extended Granum Void C Rotation.");
+const stropha_stock = new Item("Stropha Stock", "Part obtained from Nightmare Granum Void C Rotation.");
+const stropha_blade = new Item("Stropha Blade", "Part obtained from Granum Void C Rotation.");
+const stropha = new Item("Stropha", "Weapon obtained from crafting.")
+const craft_stropha = new Recipe("Craft Stropha", "Craft a Stropha from the blueprint.")
+    .addInput(stropha_blueprint, 1)
+    .addInput(stropha_barrel, 1)
+    .addInput(stropha_receiver, 1)
+    .addInput(stropha_stock, 1)
+    .addInput(stropha_blade, 1)
+    .addInput(credits, 30000)
+    .addOutput(stropha, 1);
+
+// strun
+// full weapon market 25k
+
+const strun = new Item("Strun", "Weapon obtained from Market for 25,000 credits.");
+const buy_strun = new Recipe("Buy Strun", "Buy a Strun from Market for 25,000 credits.")
+    .addInput(credits, 25000)
+    .addOutput(strun, 1);
+
+// strun wraith
+// bp and full parts invasion
+
+const strun_wraith_blueprint = new Item("Strun Wraith Blueprint", "Blueprint obtained from Invasion.");
+const strun_wraith_barrel = new Item("Strun Wraith Barrel", "Part obtained from Invasion.");
+const strun_wraith_receiver = new Item("Strun Wraith Receiver", "Part obtained from Invasion.");
+const strun_wraith_stock = new Item("Strun Wraith Stock", "Part obtained from Invasion.");
+const strun_wraith = new Item("Strun Wraith", "Weapon obtained from crafting.")
+const craft_strun_wraith = new Recipe("Craft Strun Wraith", "Craft a Strun Wraith from the blueprint.")
+    .addInput(strun_wraith_blueprint, 1)
+    .addInput(strun_wraith_barrel, 1)
+    .addInput(strun_wraith_receiver, 1)
+    .addInput(strun_wraith_stock, 1)
+    .addInput(credits, 25000)
+    .addOutput(strun_wraith, 1);
+
+// stubba
+// bp ghoul purge bounties and ghoul rictus alpha
+
+const stubba_blueprint = new Item("Stubba Blueprint", "Blueprint obtained from Ghoul Purge Bounties and Ghoul Rictus Alpha.");
+const stubba = new Item("Stubba", "Weapon obtained from crafting.")
+const craft_stubba = new Recipe("Craft Stubba", "Craft a Stubba from the blueprint.")
+    .addInput(stubba_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(grokdrul, 45)
+    .addInput(coprite_alloy, 25)
+    .addInput(ferrite, 4485)
+    .addInput(neurodes, 2)
+    .addOutput(stubba, 1);
+
+// stug
+// bp market 20k
+
+const stug_blueprint = new Item("Stug Blueprint", "Blueprint obtained from Market for 20,000 credits.");
+const buy_stug_blueprint = new Recipe("Buy Stug Blueprint", "Buy a Stug Blueprint from Market for 20,000 credits.")
+    .addInput(credits, 20000)
+    .addOutput(stug_blueprint, 1);
+const stug = new Item("Stug", "Weapon obtained from crafting.")
+const craft_stug = new Recipe("Craft Stug", "Craft a Stug from the blueprint.")
+    .addInput(stug_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(neurodes, 3)
+    .addInput(gallium, 4)
+    .addInput(salvage, 3000)
+    .addInput(alloy_plate, 1200)
+    .addOutput(stug, 1);
+
+// sun & moon
+// bp duviri paradox quest
+
+const sun_moon_blueprint = new Item("Sun & Moon Blueprint", "Blueprint obtained from Duviri Paradox Quest.");
+const sun_moon = new Item("Sun & Moon", "Weapon obtained from crafting.")
+const craft_sun_moon = new Recipe("Craft Sun & Moon", "Craft a Sun & Moon from the blueprint.")
+    .addInput(sun_moon_blueprint, 1)
+    .addInput(credits, 30000)
+    .addInput(kovnik, 100)
+    .addInput(rune_marrow, 35)
+    .addInput(lamentus, 40)
+    .addInput(silphsela, 45)
+    .addOutput(sun_moon, 1);
+
+// supra
+// bp dojo energy lab 15k
+
+const supra_blueprint = new Item("Supra Blueprint", "Blueprint obtained from Dojo Energy Lab for 15,000 credits.");
+const buy_supra_blueprint = new Recipe("Buy Supra Blueprint", "Buy a Supra Blueprint from Dojo Energy Lab for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(supra_blueprint, 1);
+const supra = new Item("Supra", "Weapon obtained from crafting.")
+const craft_supra = new Recipe("Craft Supra", "Craft a Supra from the blueprint.")
+    .addInput(supra_blueprint, 1)
+    .addInput(credits, 25000)
+    .addInput(fieldron, 7)
+    .addInput(alloy_plate, 1000)
+    .addInput(salvage, 7000)
+    .addInput(forma, 1)
+    .addOutput(supra, 1);
+
+// supra vandal
+// full weapon baro 500 ducats 275k credits
+
+const supra_vandal = new Item("Supra Vandal", "Weapon obtained from Baro Ki'Teer for 500 Ducats and 275,000 credits.");
+const buy_supra_vandal = new Recipe("Buy Supra Vandal", "Buy a Supra Vandal from Baro Ki'Teer for 500 Ducats and 275,000 credits.")
+    .addInput(ducats, 500)
+    .addInput(credits, 275000)
+    .addOutput(supra_vandal, 1);
+
+// syam
+// bp teshins cave 50 pc
+
+const syam_blueprint = new Item("Syam Blueprint", "Blueprint obtained from Teshin's Cave for 50 Pathos Clamp.");
+const buy_syam_blueprint = new Recipe("Buy Syam Blueprint", "Buy a Syam Blueprint from Teshin's Cave for 50 Pathos Clamp.")
+    .addInput(pathos_clamp, 50)
+    .addOutput(syam_blueprint, 1);
+const syam = new Item("Syam", "Weapon obtained from crafting.")
+const craft_syam = new Recipe("Craft Syam", "Craft a Syam from the blueprint.")
+    .addInput(syam_blueprint, 1)
+    .addInput(credits, 30000)
+    .addInput(maw_fang, 4)
+    .addInput(rune_marrow, 30)
+    .addInput(dracroot, 30)
+    .addInput(eevani, 30)
+    .addOutput(syam, 1);
+
+// sybaris
+// bp tenno lab 15k
+
+const sybaris_blueprint = new Item("Sybaris Blueprint", "Blueprint obtained from Tenno Lab for 15,000 credits.");
+const buy_sybaris_blueprint = new Recipe("Buy Sybaris Blueprint", "Buy a Sybaris Blueprint from Tenno Lab for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(sybaris_blueprint, 1);
+const sybaris = new Item("Sybaris", "Weapon obtained from crafting.")
+const craft_sybaris = new Recipe("Craft Sybaris", "Craft a Sybaris from the blueprint.")
+    .addInput(sybaris_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(morphics, 2)
+    .addInput(salvage, 800)
+    .addInput(rubedo, 200)
+    .addInput(forma, 1)
+    .addOutput(sybaris, 1);
+
+// sydon
+// bp chem lab 15k
+
+const sydon_blueprint = new Item("Sydon Blueprint", "Blueprint obtained from Chem Lab for 15,000 credits.");
+const buy_sydon_blueprint = new Recipe("Buy Sydon Blueprint", "Buy a Sydon Blueprint from Chem Lab for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(sydon_blueprint, 1);
+const sydon = new Item("Sydon", "Weapon obtained from crafting.")
+const craft_sydon = new Recipe("Craft Sydon", "Craft a Sydon from the blueprint.")
+    .addInput(sydon_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(detonite_injector, 5)
+    .addInput(circuits, 1100)
+    .addInput(salvage, 4000)
+    .addInput(amphis, 1)
+    .addOutput(sydon, 1);
+
+// synapse
+// bp bio lab 50k
+
+const synapse_blueprint = new Item("Synapse Blueprint", "Blueprint obtained from Bio Lab for 50,000 credits.");
+const buy_synapse_blueprint = new Recipe("Buy Synapse Blueprint", "Buy a Synapse Blueprint from Bio Lab for 50,000 credits.")
+    .addInput(credits, 50000)
+    .addOutput(synapse_blueprint, 1);
+const synapse = new Item("Synapse", "Weapon obtained from crafting.")
+const craft_synapse = new Recipe("Craft Synapse", "Craft a Synapse from the blueprint.")
+    .addInput(synapse_blueprint, 1)
+    .addInput(credits, 30000)
+    .addInput(mutagen_mass, 5)
+    .addInput(salvage, 30000)
+    .addInput(circuits, 3500)
+    .addInput(forma, 1)
+    .addOutput(synapse, 1);
+
+// synoid gammacor
+// full weapon cephalon suda 100k
+
+const synoid_gammacor = new Item("Synoid Gammacor", "Weapon obtained from Cephalon Suda for 100,000 Standing.");
+const buy_synoid_gammacor = new Recipe("Buy Synoid Gammacor", "Buy a Synoid Gammacor from Cephalon Suda for 100,000 Standing.")
+    .addInput(cephalon_suda, 100000)
+    .addOutput(synoid_gammacor, 1);
+
+// synoid heliocor
+// full weapon cephalon suda 125k
+
+const synoid_heliocor = new Item("Synoid Heliocor", "Weapon obtained from Cephalon Suda for 125,000 Standing.");
+const buy_synoid_heliocor = new Recipe("Buy Synoid Heliocor", "Buy a Synoid Heliocor from Cephalon Suda for 125,000 Standing.")
+    .addInput(cephalon_suda, 125000)
+    .addOutput(synoid_heliocor, 1);
+
+// synoid simulor
+// full weapon cephalon suda 125k
+
+const synoid_simulor = new Item("Synoid Simulor", "Weapon obtained from Cephalon Suda for 125,000 Standing.");
+const buy_synoid_simulor = new Recipe("Buy Synoid Simulor", "Buy a Synoid Simulor from Cephalon Suda for 125,000 Standing.")
+    .addInput(cephalon_suda, 125000)
+    .addOutput(synoid_simulor, 1);
+
+// talons
+// bp tenno lab 15k
+
+const talons_blueprint = new Item("Talons Blueprint", "Blueprint obtained from Tenno Lab for 15,000 credits.");
+const buy_talons_blueprint = new Recipe("Buy Talons Blueprint", "Buy a Talons Blueprint from Tenno Lab for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(talons_blueprint, 1);
+const talons = new Item("Talons", "Weapon obtained from crafting.")
+const craft_talons = new Recipe("Craft Talons", "Craft a Talons from the blueprint.")
+    .addInput(talons_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(control_module, 2)
+    .addInput(ferrite, 1500)
+    .addInput(oxium, 1200)
+    .addInput(forma, 1)
+    .addOutput(talons, 1);
+
+// tatsu
+// bp market 20k
+
+const tatsu_blueprint = new Item("Tatsu Blueprint", "Blueprint obtained from Market for 20,000 credits.");
+const buy_tatsu_blueprint = new Recipe("Buy Tatsu Blueprint", "Buy a Tatsu Blueprint from Market for 20,000 credits.")
+    .addInput(credits, 20000)
+    .addOutput(tatsu_blueprint, 1);
+const tatsu = new Item("Tatsu", "Weapon obtained from crafting.")
+const craft_tatsu = new Recipe("Craft Tatsu", "Craft a Tatsu from the blueprint.")
+    .addInput(tatsu_blueprint, 1)
+    .addInput(credits, 5000)
+    .addInput(argon_crystal, 2)
+    .addInput(kuva, 1200)
+    .addInput(auroxium_alloy, 100)
+    .addInput(hespazym_alloy, 100)
+    .addOutput(tatsu, 1);
+
+// tekko
+// bp market 25k
+
+const tekko_blueprint = new Item("Tekko Blueprint", "Blueprint obtained from Market for 25,000 credits.");
+const buy_tekko_blueprint = new Recipe("Buy Tekko Blueprint", "Buy a Tekko Blueprint from Market for 25,000 credits.")
+    .addInput(credits, 25000)
+    .addOutput(tekko_blueprint, 1);
+const tekko = new Item("Tekko", "Weapon obtained from crafting.")
+const craft_tekko = new Recipe("Craft Tekko", "Craft a Tekko from the blueprint.")
+    .addInput(tekko_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(gallium, 5)
+    .addInput(rubedo, 700)
+    .addInput(polymer_bundle, 3300)
+    .addInput(ankyros, 1)
+    .addOutput(tekko, 1);
+
+// telos akbolto
+// full weapon arbiters of hexis 100k
+
+const telos_akbolto = new Item("Telos Akbolto", "Weapon obtained from Arbiters of Hexis for 100,000 Standing.");
+const buy_telos_akbolto = new Recipe("Buy Telos Akbolto", "Buy a Telos Akbolto from Arbiters of Hexis for 100,000 Standing.")
+    .addInput(arbiters_of_hexis, 100000)
+    .addOutput(telos_akbolto, 1);
+
+// telos boltace
+// full weapon arbiters of hexis 125k
+
+const telos_boltace = new Item("Telos Boltace", "Weapon obtained from Arbiters of Hexis for 125,000 Standing.");
+const buy_telos_boltace = new Recipe("Buy Telos Boltace", "Buy a Telos Boltace from Arbiters of Hexis for 125,000 Standing.")
+    .addInput(arbiters_of_hexis, 125000)
+    .addOutput(telos_boltace, 1);
+
+// telos boltor
+// full weapon arbiters of hexis 125k
+
+const telos_boltor = new Item("Telos Boltor", "Weapon obtained from Arbiters of Hexis for 125,000 Standing.");
+const buy_telos_boltor = new Recipe("Buy Telos Boltor", "Buy a Telos Boltor from Arbiters of Hexis for 125,000 Standing.")
+    .addInput(arbiters_of_hexis, 125000)
+    .addOutput(telos_boltor, 1);
+
+// tenora
+// bp tenno lab 15k
+
+const tenora_blueprint = new Item("Tenora Blueprint", "Blueprint obtained from Tenno Lab for 15,000 credits.");
+const buy_tenora_blueprint = new Recipe("Buy Tenora Blueprint", "Buy a Tenora Blueprint from Tenno Lab for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(tenora_blueprint, 1);
+const tenora = new Item("Tenora", "Weapon obtained from crafting.")
+const craft_tenora = new Recipe("Craft Tenora", "Craft a Tenora from the blueprint.")
+    .addInput(tenora_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(neurodes, 5)
+    .addInput(salvage, 15000)
+    .addInput(rubedo, 4000)
+    .addInput(forma, 1)
+    .addOutput(tenora, 1);
+
+// tetra
+// bp market 30k
+
+const tetra_blueprint = new Item("Tetra Blueprint", "Blueprint obtained from Market for 30,000 credits.");
+const buy_tetra_blueprint = new Recipe("Buy Tetra Blueprint", "Buy a Tetra Blueprint from Market for 30,000 credits.")
+    .addInput(credits, 30000)
+    .addOutput(tetra_blueprint, 1);
+const tetra = new Item("Tetra", "Weapon obtained from crafting.")
+const craft_tetra = new Recipe("Craft Tetra", "Craft a Tetra from the blueprint.")
+    .addInput(tetra_blueprint, 1)
+    .addInput(credits, 30000)
+    .addInput(control_module, 2)
+    .addInput(alloy_plate, 400)
+    .addInput(ferrite, 900)
+    .addInput(polymer_bundle, 100)
+    .addOutput(tetra, 1);
+
+// tiberon
+// bp market 20k
+
+const tiberon_blueprint = new Item("Tiberon Blueprint", "Blueprint obtained from Market for 20,000 credits.");
+const buy_tiberon_blueprint = new Recipe("Buy Tiberon Blueprint", "Buy a Tiberon Blueprint from Market for 20,000 credits.")
+    .addInput(credits, 20000)
+    .addOutput(tiberon_blueprint, 1);
+const tiberon = new Item("Tiberon", "Weapon obtained from crafting.")
+const craft_tiberon = new Recipe("Craft Tiberon", "Craft a Tiberon from the blueprint.")
+    .addInput(tiberon_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(latron, 1)
+    .addInput(plastids, 650)
+    .addInput(rubedo, 600)
+    .addInput(forma, 1)
+    .addOutput(tiberon, 1);
+
+// tigris
+// bp market 40k
+
+const tigris_blueprint = new Item("Tigris Blueprint", "Blueprint obtained from Market for 40,000 credits.");
+const buy_tigris_blueprint = new Recipe("Buy Tigris Blueprint", "Buy a Tigris Blueprint from Market for 40,000 credits.")
+    .addInput(credits, 40000)
+    .addOutput(tigris_blueprint, 1);
+const tigris = new Item("Tigris", "Weapon obtained from crafting.")
+const craft_tigris = new Recipe("Craft Tigris", "Craft a Tigris from the blueprint.")
+    .addInput(tigris_blueprint, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 3)
+    .addInput(circuits, 900)
+    .addInput(salvage, 1200)
+    .addInput(rubedo, 1200)
+    .addOutput(tigris, 1);
+
+// tonbo
+// bp tenno lab 15k
+
+const tonbo_blueprint = new Item("Tonbo Blueprint", "Blueprint obtained from Tenno Lab for 15,000 credits.");
+const buy_tonbo_blueprint = new Recipe("Buy Tonbo Blueprint", "Buy a Tonbo Blueprint from Tenno Lab for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(tonbo_blueprint, 1);
+const tonbo = new Item("Tonbo", "Weapon obtained from crafting.")
+const craft_tonbo = new Recipe("Craft Tonbo", "Craft a Tonbo from the blueprint.")
+    .addInput(tonbo_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(control_module, 2)
+    .addInput(plastids, 800)
+    .addInput(ferrite, 2000)
+    .addInput(oxium, 100)
+    .addOutput(tonbo, 1);
+
+// tonkor
+// bp market 30k
+
+const tonkor_blueprint = new Item("Tonkor Blueprint", "Blueprint obtained from Market for 30,000 credits.");
+const buy_tonkor_blueprint = new Recipe("Buy Tonkor Blueprint", "Buy a Tonkor Blueprint from Market for 30,000 credits.")
+    .addInput(credits, 30000)
+    .addOutput(tonkor_blueprint, 1);
+const tonkor = new Item("Tonkor", "Weapon obtained from crafting.")
+const craft_tonkor = new Recipe("Craft Tonkor", "Craft a Tonkor from the blueprint.")
+    .addInput(tonkor_blueprint, 1)
+    .addInput(credits, 60000)
+    .addInput(salvage, 1500)
+    .addInput(oxium, 200)
+    .addInput(cryotic, 800)
+    .addInput(argon_crystal, 2)
+    .addOutput(tonkor, 1);
+
+// torid
+// bp dojo bio lab 15k
+
+const torid_blueprint = new Item("Torid Blueprint", "Blueprint obtained from Bio Lab for 15,000 credits.");
+const buy_torid_blueprint = new Recipe("Buy Torid Blueprint", "Buy a Torid Blueprint from Bio Lab for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(torid_blueprint, 1);
+const torid = new Item("Torid", "Weapon obtained from crafting.")
+const craft_torid = new Recipe("Craft Torid", "Craft a Torid from the blueprint.")
+    .addInput(torid_blueprint, 1)
+    .addInput(credits, 30000)
+    .addInput(mutagen_mass, 2)
+    .addInput(salvage, 4500)
+    .addInput(circuits, 600)
+    .addInput(forma, 1)
+    .addOutput(torid, 1);
+
+// trumna
+// bp father 5k standing rank 3
+// parts bp father 2.5k standing rank 3
+
+const trumna_blueprint = new Item("Trumna Blueprint", "Blueprint obtained from Father for 5,000 standing at rank 3.");
+const buy_trumna_blueprint = new Recipe("Buy Trumna Blueprint", "Buy a Trumna Blueprint from Father for 5,000 standing at rank 3.")
+    .addInput(entrati, 5000)
+    .addOutput(trumna_blueprint, 1);
+const trumna_barrel_blueprint = new Item("Trumna Barrel Blueprint", "Blueprint obtained from Father for 2,500 standing at rank 3.");
+const buy_trumna_barrel_blueprint = new Recipe("Buy Trumna Barrel Blueprint", "Buy a Trumna Barrel Blueprint from Father for 2,500 standing at rank 3.")
+    .addInput(entrati, 2500)
+    .addOutput(trumna_barrel_blueprint, 1);
+const trumna_stock_blueprint = new Item("Trumna Stock Blueprint", "Blueprint obtained from Father for 2,500 standing at rank 3.");
+const buy_trumna_stock_blueprint = new Recipe("Buy Trumna Stock Blueprint", "Buy a Trumna Stock Blueprint from Father for 2,500 standing at rank 3.")
+    .addInput(entrati, 2500)
+    .addOutput(trumna_stock_blueprint, 1);
+const trumna_receiver_blueprint = new Item("Trumna Receiver Blueprint", "Blueprint obtained from Father for 2,500 standing at rank 3.");
+const buy_trumna_receiver_blueprint = new Recipe("Buy Trumna Receiver Blueprint", "Buy a Trumna Receiver Blueprint from Father for 2,500 standing at rank 3.")
+    .addInput(entrati, 2500)
+    .addOutput(trumna_receiver_blueprint, 1);
+const trumna_barrel = new Item("Trumna Barrel", "Weapon part obtained from crafting.")
+const craft_trumna_barrel = new Recipe("Craft Trumna Barrel", "Craft a Trumna Barrel from the blueprint.")
+    .addInput(trumna_barrel_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(adramal_alloy, 45)
+    .addInput(marquise_veridos, 15)
+    .addInput(sporulate_sac, 20)
+    .addInput(orokin_cell, 5)
+    .addOutput(trumna_barrel, 1);
+const trumna_stock = new Item("Trumna Stock", "Weapon part obtained from crafting.")
+const craft_trumna_stock = new Recipe("Craft Trumna Stock", "Craft a Trumna Stock from the blueprint.")
+    .addInput(trumna_stock_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(auroxium_alloy, 45)
+    .addInput(lucent_teroglobe, 30)
+    .addInput(saturated_muscle_mass, 20)
+    .addInput(cabochon_embolos, 2)
+    .addOutput(trumna_stock, 1);
+const trumna_receiver = new Item("Trumna Receiver", "Weapon part obtained from crafting.")
+const craft_trumna_receiver = new Recipe("Craft Trumna Receiver", "Craft a Trumna Receiver from the blueprint.")
+    .addInput(trumna_receiver_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(tempered_bapholite, 30)
+    .addInput(purified_heciphron, 15)
+    .addInput(waxen_sebum_deposit, 10)
+    .addInput(argon_crystal, 1)
+    .addOutput(trumna_receiver, 1);
+const trumna = new Item("Trumna", "Weapon obtained from crafting.")
+const craft_trumna = new Recipe("Craft Trumna", "Craft a Trumna from the blueprint.")
+    .addInput(trumna_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(trumna_barrel, 1)
+    .addInput(trumna_stock, 1)
+    .addInput(trumna_receiver, 1)
+    .addInput(seriglass_shard, 1)
+    .addOutput(trumna, 1);
+
+// twin basolk
+// bp market 15k
+
+const twin_basolk_blueprint = new Item("Twin Basolk Blueprint", "Blueprint obtained from Market for 15,000 credits.");
+const buy_twin_basolk_blueprint = new Recipe("Buy Twin Basolk Blueprint", "Buy a Twin Basolk Blueprint from Market for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(twin_basolk_blueprint, 1);
+const twin_basolk = new Item("Twin Basolk", "Weapon obtained from crafting.")
+const craft_twin_basolk = new Recipe("Craft Twin Basolk", "Craft a Twin Basolk from the blueprint.")
+    .addInput(twin_basolk_blueprint, 1)
+    .addInput(credits, 30000)
+    .addInput(dual_zoren, 1)
+    .addInput(atomos, 1)
+    .addInput(control_module, 2)
+    .addOutput(twin_basolk, 1);
+
+// twin grakatas
+// bp market 20k
+
+const twin_grakatas_blueprint = new Item("Twin Grakatas Blueprint", "Blueprint obtained from Market for 20,000 credits.");
+const buy_twin_grakatas_blueprint = new Recipe("Buy Twin Grakatas Blueprint", "Buy a Twin Grakatas Blueprint from Market for 20,000 credits.")
+    .addInput(credits, 20000)
+    .addOutput(twin_grakatas_blueprint, 1);
+const twin_grakatas = new Item("Twin Grakatas", "Weapon obtained from crafting.")
+const craft_twin_grakatas = new Recipe("Craft Twin Grakatas", "Craft a Twin Grakatas from the blueprint.")
+    .addInput(twin_grakatas_blueprint, 1)
+    .addInput(credits, 30000)
+    .addInput(grakata, 2)
+    .addInput(forma, 1)
+    .addOutput(twin_grakatas, 1);
+
+// twin gremlins
+// bp lech kril and vor assasination
+
+const twin_gremlins_blueprint = new Item("Twin Gremlins Blueprint", "Blueprint obtained from Lech Kril and Vor Assassination.");
+const twin_gremlins = new Item("Twin Gremlins", "Weapon obtained from crafting.")
+const craft_twin_gremlins = new Recipe("Craft Twin Gremlins", "Craft a Twin Gremlins from the blueprint.")
+    .addInput(twin_gremlins_blueprint, 1)
+    .addInput(credits, 25000)
+    .addInput(neurodes, 5)
+    .addInput(circuits, 900)
+    .addInput(salvage, 1500)
+    .addInput(rubedo, 1200)
+    .addOutput(twin_gremlins, 1);
+
+// twin kohmak
+// bp kela de thaym assasination
+
+const twin_kohmak_blueprint = new Item("Twin Kohmak Blueprint", "Blueprint obtained from Kela De Thaym Assassination.");
+const twin_kohmak = new Item("Twin Kohmak", "Weapon obtained from crafting.")
+const craft_twin_kohmak = new Recipe("Craft Twin Kohmak", "Craft a Twin Kohmak from the blueprint.")
+    .addInput(twin_kohmak_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(kohmak, 2)
+    .addInput(forma, 1)
+    .addOutput(twin_kohmak, 1);
+
+// twin krohkur
+// bp chem lab 15k
+
+const twin_krohkur_blueprint = new Item("Twin Krohkur Blueprint", "Blueprint obtained from Chem Lab for 15,000 credits.");
+const buy_twin_krohkur_blueprint = new Recipe("Buy Twin Krohkur Blueprint", "Buy a Twin Krohkur Blueprint from Chem Lab for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(twin_krohkur_blueprint, 1);
+const twin_krohkur = new Item("Twin Krohkur", "Weapon obtained from crafting.")
+const craft_twin_krohkur = new Recipe("Craft Twin Krohkur", "Craft a Twin Krohkur from the blueprint.")
+    .addInput(twin_krohkur_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(krohkur, 2)
+    .addInput(forma, 1)
+    .addInput(detonite_injector, 5)
+    .addOutput(twin_krohkur, 1);
+
+// twin rogga
+// bp market 30k
+
+const twin_rogga_blueprint = new Item("Twin Rogga Blueprint", "Blueprint obtained from Market for 30,000 credits.");
+const buy_twin_rogga_blueprint = new Recipe("Buy Twin Rogga Blueprint", "Buy a Twin Rogga Blueprint from Market for 30,000 credits.")
+    .addInput(credits, 30000)
+    .addOutput(twin_rogga_blueprint, 1);
+const twin_rogga = new Item("Twin Rogga", "Weapon obtained from crafting.")
+const craft_twin_rogga = new Recipe("Craft Twin Rogga", "Craft a Twin Rogga from the blueprint.")
+    .addInput(twin_rogga_blueprint, 1)
+    .addInput(credits, 30000)
+    .addInput(argon_crystal, 2)
+    .addInput(kuva, 1600)
+    .addInput(alloy_plate, 2600)
+    .addInput(ferrite, 15000)
+    .addOutput(twin_rogga, 1);
+
+// twin vipers
+// bp market 15k
+
+const twin_vipers_blueprint = new Item("Twin Vipers Blueprint", "Blueprint obtained from Market for 15,000 credits.");
+const buy_twin_vipers_blueprint = new Recipe("Buy Twin Vipers Blueprint", "Buy a Twin Vipers Blueprint from Market for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(twin_vipers_blueprint, 1);
+const twin_vipers = new Item("Twin Vipers", "Weapon obtained from crafting.")
+const craft_twin_vipers = new Recipe("Craft Twin Vipers", "Craft a Twin Vipers from the blueprint.")
+    .addInput(twin_vipers_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(viper, 2)
+    .addInput(orokin_cell, 1)
+    .addOutput(twin_vipers, 1);
+
+// twin vipers wraith
+// bp and full parts invasions
+
+const twin_vipers_wraith_blueprint = new Item("Twin Vipers Wraith Blueprint", "Blueprint obtained from Invasions.");
+const twin_vipers_wraith_barrel = new Item("Twin Vipers Wraith Barrel", "Part obtained from Invasions.");
+const twin_vipers_wraith_link = new Item("Twin Vipers Wraith Link", "Part obtained from Invasions.");
+const twin_vipers_wraith_receiver = new Item("Twin Vipers Wraith Receiver", "Part obtained from Invasions.");
+const twin_vipers_wraith = new Item("Twin Vipers Wraith", "Weapon obtained from crafting.")
+const craft_twin_vipers_wraith = new Recipe("Craft Twin Vipers Wraith", "Craft a Twin Vipers Wraith from the blueprint.")
+    .addInput(twin_vipers_wraith_blueprint, 1)
+    .addInput(twin_vipers_wraith_barrel, 1)
+    .addInput(twin_vipers_wraith_link, 1)
+    .addInput(twin_vipers_wraith_receiver, 1)
+    .addInput(credits, 25000)
+    .addOutput(twin_vipers_wraith, 1);
+
+// tysis
+// bp market 30k
+
+const tysis_blueprint = new Item("Tysis Blueprint", "Blueprint obtained from Market for 30,000 credits.");
+const buy_tysis_blueprint = new Recipe("Buy Tysis Blueprint", "Buy a Tysis Blueprint from Market for 30,000 credits.")
+    .addInput(credits, 30000)
+    .addOutput(tysis_blueprint, 1);
+const tysis = new Item("Tysis", "Weapon obtained from crafting.")
+const craft_tysis = new Recipe("Craft Tysis", "Craft a Tysis from the blueprint.")
+    .addInput(tysis_blueprint, 1)
+    .addInput(credits, 30000)
+    .addInput(neurodes, 2)
+    .addInput(plastids, 400)
+    .addInput(nano_spores, 900)
+    .addInput(polymer_bundle, 100)
+    .addOutput(tysis, 1);
+
+// vastilok
+// full weapon baro 550 ducats 325k credits
+
+const vastilok = new Item("Vastilok", "Weapon obtained from Baro Ki'Teer for 550 Ducats and 325,000 credits.")
+const buy_vastilok = new Recipe("Buy Vastilok", "Buy a Vastilok from Baro Ki'Teer for 550 Ducats and 325,000 credits.")
+    .addInput(ducats, 550)
+    .addInput(credits, 325000)
+    .addOutput(vastilok, 1);
+
+// vaykor hek
+// full weapon steel meridian 125k standing
+
+const vaykor_hek = new Item("Vaykor Hek", "Weapon obtained from Steel Meridian for 125,000 standing.")
+const buy_vaykor_hek = new Recipe("Buy Vaykor Hek", "Buy a Vaykor Hek from Steel Meridian for 125,000 standing.")
+    .addInput(steel_meridian, 125000)
+    .addOutput(vaykor_hek, 1);
+
+// vaykor marelok
+// full weapon steel meridian 100k standing
+
+const vaykor_marelok = new Item("Vaykor Marelok", "Weapon obtained from Steel Meridian for 100,000 standing.")
+const buy_vaykor_marelok = new Recipe("Buy Vaykor Marelok", "Buy a Vaykor Marelok from Steel Meridian for 100,000 standing.")
+    .addInput(steel_meridian, 100000)
+    .addOutput(vaykor_marelok, 1);
+
+// vaykor sydon
+// full weapon steel meridian 125k standing
+
+const vaykor_sydon = new Item("Vaykor Sydon", "Weapon obtained from Steel Meridian for 125,000 standing.")
+const buy_vaykor_sydon = new Recipe("Buy Vaykor Sydon", "Buy a Vaykor Sydon from Steel Meridian for 125,000 standing.")
+    .addInput(steel_meridian, 125000)
+    .addOutput(vaykor_sydon, 1);
+
+// vectis
+// bp market 40k
+
+const vectis_blueprint = new Item("Vectis Blueprint", "Blueprint obtained from Market for 40,000 credits.");
+const buy_vectis_blueprint = new Recipe("Buy Vectis Blueprint", "Buy a Vectis Blueprint from Market for 40,000 credits.")
+    .addInput(credits, 40000)
+    .addOutput(vectis_blueprint, 1);
+const vectis = new Item("Vectis", "Weapon obtained from crafting.")
+const craft_vectis = new Recipe("Craft Vectis", "Craft a Vectis from the blueprint.")
+    .addInput(vectis_blueprint, 1)
+    .addInput(credits, 25000)
+    .addInput(neurodes, 4)
+    .addInput(orokin_cell, 4)
+    .addInput(nano_spores, 3000)
+    .addInput(rubedo, 2500)
+    .addOutput(vectis, 1);
+
+// veldt
+// bp tenno lab 15k
+
+const veldt_blueprint = new Item("Veldt Blueprint", "Blueprint obtained from Tenno Lab for 15,000 credits.");
+const buy_veldt_blueprint = new Recipe("Buy Veldt Blueprint", "Buy a Veldt Blueprint from Tenno Lab for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(veldt_blueprint, 1);
+const veldt = new Item("Veldt", "Weapon obtained from crafting.")
+const craft_veldt = new Recipe("Craft Veldt", "Craft a Veldt from the blueprint.")
+    .addInput(veldt_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(morphics, 10)
+    .addInput(cryotic, 600)
+    .addInput(ferrite, 7250)
+    .addInput(forma, 1)
+    .addOutput(veldt, 1);
+
+// velocitus
+// bp tenno lab 15k
+// full parts syndicate 20k standing
+
+const velocitus_blueprint = new Item("Velocitus Blueprint", "Blueprint obtained from Tenno Lab for 15,000 credits.");
+const buy_velocitus_blueprint = new Recipe("Buy Velocitus Blueprint", "Buy a Velocitus Blueprint from Tenno Lab for 15,000 credits.")   
+    .addInput(credits, 15000)
+    .addOutput(velocitus_blueprint, 1);
+const velocitus_barrel = new Item("Velocitus Barrel", "Part obtained from Cephalon Suda for 20,000 standing.")
+const buy_velocitus_barrel = new Recipe("Buy Velocitus Barrel", "Buy a Velocitus Barrel from Cephalon Suda for 20,000 standing.")
+    .addInput(cephalon_suda, 20000)
+    .addOutput(velocitus_barrel, 1);
+const velocitus_receiver = new Item("Velocitus Receiver", "Part obtained from Steel Meridian for 20,000 standing.")
+const buy_velocitus_receiver = new Recipe("Buy Velocitus Receiver", "Buy a Velocitus Receiver from Steel Meridian for 20,000 standing.")
+    .addInput(steel_meridian, 20000)
+    .addOutput(velocitus_receiver, 1);
+const velocitus_stock = new Item("Velocitus Stock", "Part obtained from Red Veil for 20,000 standing.")
+const buy_velocitus_stock = new Recipe("Buy Velocitus Stock", "Buy a Velocitus Stock from Red Veil for 20,000 standing.")
+    .addInput(red_veil, 20000)
+    .addOutput(velocitus_stock, 1);
+const velocitus = new Item("Velocitus", "Weapon obtained from crafting.")
+const craft_velocitus = new Recipe("Craft Velocitus", "Craft a Velocitus from the blueprint.")
+    .addInput(velocitus_blueprint, 1)
+    .addInput(velocitus_barrel, 1)
+    .addInput(velocitus_receiver, 1)
+    .addInput(velocitus_stock, 1)
+    .addInput(control_module, 2)
+    .addInput(credits, 30000)
+    .addOutput(velocitus, 1);
+
+// velox
+// bp market 25k
+// full parts granum void
+
+const velox_blueprint = new Item("Velox Blueprint", "Blueprint obtained from Market for 25,000 credits.");
+const buy_velox_blueprint = new Recipe("Buy Velox Blueprint", "Buy a Velox Blueprint from Market for 25,000 credits.")
+    .addInput(credits, 25000)
+    .addOutput(velox_blueprint, 1);
+const velox_barrel = new Item("Velox Barrel", "Part obtained from Granum Void C Rotation.")
+const velox_receiver = new Item("Velox Receiver", "Part obtained from Extended Granum Void C Rotation.")
+const velox = new Item("Velox", "Weapon obtained from crafting.")
+const craft_velox = new Recipe("Craft Velox", "Craft a Velox from the blueprint.")
+    .addInput(velox_blueprint, 1)
+    .addInput(velox_barrel, 1)
+    .addInput(velox_receiver, 1)
+    .addInput(credits, 20000)
+    .addInput(orokin_cell, 3)
+    .addOutput(velox, 1);
+
+// venato
+// bp tenno lab 15k
+
+const venato_blueprint = new Item("Venato Blueprint", "Blueprint obtained from Tenno Lab for 15,000 credits.");
+const buy_venato_blueprint = new Recipe("Buy Venato Blueprint", "Buy a Venato Blueprint from Tenno Lab for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(venato_blueprint, 1);
+const venato = new Item("Venato", "Weapon obtained from crafting.")
+const craft_venato = new Recipe("Craft Venato", "Craft a Venato from the blueprint.")
+    .addInput(venato_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(narmer_isoplast, 16)
+    .addInput(anomaly_shard, 5)
+    .addInput(exceptional_sentient_core, 5)
+    .addInput(iradite, 60)
+    .addOutput(venato, 1);
+
+// venka
+// bp tenno lab 15k
+
+const venka_blueprint = new Item("Venka Blueprint", "Blueprint obtained from Tenno Lab for 15,000 credits.");
+const buy_venka_blueprint = new Recipe("Buy Venka Blueprint", "Buy a Venka Blueprint from Tenno Lab for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(venka_blueprint, 1);
+const venka = new Item("Venka", "Weapon obtained from crafting.")
+const craft_venka = new Recipe("Craft Venka", "Craft a Venka from the blueprint.")
+    .addInput(venka_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(gallium, 4)
+    .addInput(salvage, 1000)
+    .addInput(plastids, 500)
+    .addInput(forma, 1)
+    .addOutput(venka, 1);
+
+// verdilac
+// bp narmer bounties
+
+const verdilac_blueprint = new Item("Verdilac Blueprint", "Blueprint obtained from Narmer Bounties.")
+const verdilac = new Item("Verdilac", "Weapon obtained from crafting.")
+const craft_verdilac = new Recipe("Craft Verdilac", "Craft a Verdilac from the blueprint.")
+    .addInput(verdilac_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(narmer_isoplast, 12)
+    .addInput(mortus_horn, 20)
+    .addInput(intact_sentient_core, 10)
+    .addInput(star_amarast, 6)
+    .addOutput(verdilac, 1);
+
+// vericres
+// full weapon baro 410 ducats 200k credits
+
+const vericres = new Item("Vericres", "Weapon obtained from Baro Ki'Teer for 410 ducats and 200,000 credits.")
+const buy_vericres = new Recipe("Buy Vericres", "Buy a Vericres from Baro Ki'Teer for 410 ducats and 200,000 credits.")
+    .addInput(ducats, 410)
+    .addInput(credits, 200000)
+    .addOutput(vericres, 1);
+
+// viper wraith
+// full weapon baro 400 ducats 75k credits
+
+const viper_wraith = new Item("Viper Wraith", "Weapon obtained from Baro Ki'Teer for 400 ducats and 75,000 credits.")
+const buy_viper_wraith = new Recipe("Buy Viper Wraith", "Buy a Viper Wraith from Baro Ki'Teer for 400 ducats and 75,000 credits.")
+    .addInput(ducats, 400)
+    .addInput(credits, 75000)
+    .addOutput(viper_wraith, 1);
+
+// vitrica
+
+const vitrica_blueprint = new Item("Vitrica Blueprint", "Buy a key and oubliette from Nightwave Offerings for 60 each. Fight the boss for the blueprint")
+const buy_vitrica_blueprint = new Recipe("Buy Vitrica Blueprint", "Buy a Vitrica Blueprint from Nightwave Offerings for 120 total Nora Creds.")
+    .addInput(nora_cred, 120)
+    .addOutput(vitrica_blueprint, 1);
+const vitrica = new Item("Vitrica", "Weapon obtained from crafting.")
+const craft_vitrica = new Recipe("Craft Vitrica", "Craft a Vitrica from the blueprint.")
+    .addInput(vitrica_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(orokin_cell, 15)
+    .addInput(oxium, 925)
+    .addInput(tempered_bapholite, 60)
+    .addInput(purified_heciphron, 10)
+    .addOutput(vitrica, 1);
+
+// volnus
+// bp market 20k
+
+const volnus_blueprint = new Item("Volnus Blueprint", "Blueprint obtained from Market for 20,000 credits.");
+const buy_volnus_blueprint = new Recipe("Buy Volnus Blueprint", "Buy a Volnus Blueprint from Market for 20,000 credits.")
+    .addInput(credits, 20000)
+    .addOutput(volnus_blueprint, 1);
+const volnus = new Item("Volnus", "Weapon obtained from crafting.")
+const craft_volnus = new Recipe("Craft Volnus", "Craft a Volnus from the blueprint.")
+    .addInput(volnus_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(oxium, 225)
+    .addInput(argon_crystal, 2)
+    .addInput(alloy_plate, 11000)
+    .addInput(cryotic, 875)
+    .addOutput(volnus, 1);
+
+// vulkar
+// bp market 20k
+
+const vulkar_blueprint = new Item("Vulkar Blueprint", "Blueprint obtained from Market for 20,000 credits.");
+const buy_vulkar_blueprint = new Recipe("Buy Vulkar Blueprint", "Buy a Vulkar Blueprint from Market for 20,000 credits.")
+    .addInput(credits, 20000)
+    .addOutput(vulkar_blueprint, 1);
+const vulkar = new Item("Vulkar", "Weapon obtained from crafting.")
+const craft_vulkar = new Recipe("Craft Vulkar", "Craft a Vulkar from the blueprint.")
+    .addInput(vulkar_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(morphics, 5)
+    .addInput(circuits, 800)
+    .addInput(salvage, 1200)
+    .addInput(plastids, 800)
+    .addOutput(vulkar, 1);
+
+// vulkar wraith
+// full weapon baro 450 ducats 300k credits
+
+const vulkar_wraith = new Item("Vulkar Wraith", "Weapon obtained from Baro Ki'Teer for 450 ducats and 300,000 credits.")
+const buy_vulkar_wraith = new Recipe("Buy Vulkar Wraith", "Buy a Vulkar Wraith from Baro Ki'Teer for 450 ducats and 300,000 credits.")
+    .addInput(ducats, 450)
+    .addInput(credits, 300000)
+    .addOutput(vulkar_wraith, 1);
+
+// war
+// bp stalker
 
 const war_blueprint = new Item("War Blueprint", "Blueprint obtained from Shadow Stalker")
 const war = new Item("War", "Blueprint obtained from Shadow Stalker")
@@ -5702,6 +6919,146 @@ const craft_war = new Recipe("Craft War", "Craft a War from the blueprint.")
     .addInput(nitain, 5)
     .addOutput(war, 1);
 
-// warframes
+// wolf sledge
+// bp and full parts wolf of saturn six
+
+const wolf_sledge_blueprint = new Item("Wolf Sledge Blueprint", "Blueprint obtained from Wolf of Saturn Six.")
+const wolf_sledge_head = new Item("Wolf Sledge Head", "Blueprint obtained from Wolf of Saturn Six.")
+const wolf_sledge_handle = new Item("Wolf Sledge Handle", "Blueprint obtained from Wolf of Saturn Six.")
+const wolf_sledge_motor = new Item("Wolf Sledge Motor", "Blueprint obtained from Wolf of Saturn Six.")
+const wolf_sledge = new Item("Wolf Sledge", "Weapon obtained from crafting.")
+const craft_wolf_sledge = new Recipe("Craft Wolf Sledge", "Craft a Wolf Sledge from the blueprint.")
+    .addInput(wolf_sledge_blueprint, 1)
+    .addInput(wolf_sledge_head, 1)
+    .addInput(wolf_sledge_handle, 1)
+    .addInput(wolf_sledge_motor, 1)
+    .addInput(nitain, 5)
+    .addInput(credits, 30000)
+    .addOutput(wolf_sledge, 1);
+
+// xoris
+// full weapon deadlock protocol quest
+
+const xoris = new Item("Xoris", "Weapon obtained from Deadlock Protocol quest.")
+
+// zakti
+// bp tenno lab 15k
+
+const zakti_blueprint = new Item("Zakti Blueprint", "Blueprint obtained from Tenno Lab for 15,000 credits.");
+const buy_zakti_blueprint = new Recipe("Buy Zakti Blueprint", "Buy a Zakti Blueprint from Tenno Lab for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(zakti_blueprint, 1);
+const zakti = new Item("Zakti", "Weapon obtained from crafting.")
+const craft_zakti = new Recipe("Craft Zakti", "Craft a Zakti from the blueprint.")
+    .addInput(zakti_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(control_module, 8)
+    .addInput(plastids, 350)
+    .addInput(alloy_plate, 6500)
+    .addInput(nano_spores, 5000)
+    .addOutput(zakti, 1);
+
+// zarr
+// bp market 30k
+
+const zarr_blueprint = new Item("Zarr Blueprint", "Blueprint obtained from Market for 30,000 credits.");
+const buy_zarr_blueprint = new Recipe("Buy Zarr Blueprint", "Buy a Zarr Blueprint from Market for 30,000 credits.")
+    .addInput(credits, 30000)
+    .addOutput(zarr_blueprint, 1);
+const zarr = new Item("Zarr", "Weapon obtained from crafting.")
+const craft_zarr = new Recipe("Craft Zarr", "Craft a Zarr from the blueprint.")
+    .addInput(zarr_blueprint, 1)
+    .addInput(credits, 30000)
+    .addInput(kuva, 1800)
+    .addInput(alloy_plate, 2400)
+    .addInput(salvage, 5500)
+    .addInput(drakgoon, 1)
+    .addOutput(zarr, 1);
+
+// zenistar
+// full weapon login reward 100 300 500
+
+const zenistar = new Item("Zenistar", "Weapon obtained from login rewards.")
+
+// zenith
+// full weapon login reward 100 300 500
+
+const zenith = new Item("Zenith", "Weapon obtained from login rewards.")
+
+// zhuge
+// bp market 20k
+
+const zhuge_blueprint = new Item("Zhuge Blueprint", "Blueprint obtained from Market for 20,000 credits.");
+const buy_zhuge_blueprint = new Recipe("Buy Zhuge Blueprint", "Buy a Zhuge Blueprint from Market for 20,000 credits.")
+    .addInput(credits, 20000)
+    .addOutput(zhuge_blueprint, 1);
+const zhuge = new Item("Zhuge", "Weapon obtained from crafting.")
+const craft_zhuge = new Recipe("Craft Zhuge", "Craft a Zhuge from the blueprint.")
+    .addInput(zhuge_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(cryotic, 2800)
+    .addInput(polymer_bundle, 900)
+    .addInput(nitain, 2)
+    .addInput(argon_crystal, 2)
+    .addOutput(zhuge, 1);
+
+// zylok
+// full weapon baro 500 ducats 200k credits
+
+const zylok = new Item("Zylok", "Weapon obtained from Baro Ki'Teer for 500 ducats and 200,000 credits.")
+const buy_zylok = new Recipe("Buy Zylok", "Buy a Zylok from Baro Ki'Teer for 500 ducats and 200,000 credits.")
+    .addInput(ducats, 500)
+    .addInput(credits, 200000)
+    .addOutput(zylok, 1);
+
+// zymos
+// bp father 2000 standing
+// parts bp father 1000 standing
+
+const zymos_blueprint = new Item("Zymos Blueprint", "Blueprint obtained from Father for 2000 standing.")
+const buy_zymos_blueprint = new Recipe("Buy Zymos Blueprint", "Buy a Zymos Blueprint from Father for 2000 standing.")
+    .addInput(entrati, 2000)
+    .addOutput(zymos_blueprint, 1);
+const zymos_barrel_blueprint = new Item("Zymos Barrel Blueprint", "Blueprint obtained from Father for 1000 standing.")
+const buy_zymos_barrel_blueprint = new Recipe("Buy Zymos Barrel Blueprint", "Buy a Zymos Barrel Blueprint from Father for 1000 standing.")
+    .addInput(entrati, 1000)
+    .addOutput(zymos_barrel_blueprint, 1);
+const zymos_receiver_blueprint = new Item("Zymos Receiver Blueprint", "Blueprint obtained from Father for 1000 standing.")
+const buy_zymos_receiver_blueprint = new Recipe("Buy Zymos Receiver Blueprint", "Buy a Zymos Receiver Blueprint from Father for 1000 standing.")
+    .addInput(entrati, 1000)
+    .addOutput(zymos_receiver_blueprint, 1);
+const zymos_barrel = new Item("Zymos Barrel", "Weapon part obtained from crafting.")
+const craft_zymos_barrel = new Recipe("Craft Zymos Barrel", "Craft a Zymos Barrel from the blueprint.")
+    .addInput(zymos_barrel_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(tempered_bapholite, 20)
+    .addInput(purified_heciphron, 5)
+    .addInput(dendrite_blastoma, 8)
+    .addInput(neurodes, 4)
+    .addOutput(zymos_barrel, 1);
+const zymos_receiver = new Item("Zymos Receiver", "Weapon part obtained from crafting.")
+const craft_zymos_receiver = new Recipe("Craft Zymos Receiver", "Craft a Zymos Receiver from the blueprint.")
+    .addInput(zymos_receiver_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(adramal_alloy, 20)
+    .addInput(purified_heciphron, 5)
+    .addInput(pustulent_cognitive_nodule, 8)
+    .addInput(morphics, 5)
+    .addOutput(zymos_receiver, 1);
+const zymos = new Item("Zymos", "Weapon obtained from crafting.")
+const craft_zymos = new Recipe("Craft Zymos", "Craft a Zymos from the blueprint.")
+    .addInput(zymos_blueprint, 1)
+    .addInput(credits, 20000)
+    .addInput(zymos_barrel, 1)
+    .addInput(zymos_receiver, 1)
+    .addOutput(zymos, 1);
+
+
+
+
+
+
+
+
 
 // finalize
