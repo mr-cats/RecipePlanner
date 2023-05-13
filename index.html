@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Recipe Master</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Master</title>
+    <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-  <div id="myDiv">
-    This is my div.
-  </div>
+    <div id="info-container">
+        Information goes here
+    </div>
+    <div id="planner">
+        <div id="want-container">Want:</div>
+        <div id="todo-container">Todo:</div>
+        <div id="need-container">Need:</div>
+        <div id="have-container">Have:</div>
+    </div>
+    <div>
+        <button id="debug">Debug</button>
+    </div>
+
+    <script type="module" src="handler.js"></script>
+    <script type="module" src="item.js"></script>
+    <script type="module" src="recipe.js"></script>
+    <script type="module" src="countMap.js"></script>
+    <script type="module" src="warframe_preset.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
+
 </html>

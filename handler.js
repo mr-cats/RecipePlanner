@@ -3,7 +3,10 @@ export class Handler {
         this.items = new Map();
         this.recipes = new Map();
     }
-
+    static init() {
+        this.items = new Map();
+        this.recipes = new Map();
+    }
     static getItem(name) {
         return this.items.get(name);
     }

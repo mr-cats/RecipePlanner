@@ -1,3 +1,4 @@
+import { Handler } from "./handler.js";
 export class Recipe {
     constructor(name, desc) {
         this.name = name;
@@ -21,7 +22,7 @@ export class Recipe {
             item = item.name;
         }
         this.outputs.set(item, quantity);
-        item.recipes.push(this);
+        Handler.getItem(item).recipes.push(this);
         return this;
     }
 

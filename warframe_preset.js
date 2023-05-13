@@ -1,10 +1,11 @@
 // dont try this at home
 
-import { Item } from "./item";
-import { Recipe } from "./recipe";
-import { Handler } from "./handler";
+import { Item } from "./item.js";
+import { Recipe } from "./recipe.js";
+import { Handler } from "./handler.js";
 
 const handler = new Handler();
+Handler.init();
 
 // Table of Contents
 // Ctrl + F to fast travel
@@ -401,7 +402,7 @@ const craft_pyrotic_alloy = new Recipe("Craft Pyrotic Alloy", "Reusable Blueprin
     .addOutput(pyrotic_alloy, 20);
 
 const radian_sentirum = new Item("Radian Sentirum", "A resource crafted from sentirum.");
-const craft_radian_sentirum = new Item("Craft Radian Sentirum", "Reusable Blueprint from Old Man Suumbaat.")
+const craft_radian_sentirum = new Recipe("Craft Radian Sentirum", "Reusable Blueprint from Old Man Suumbaat.")
     .addInput(sentirum, 3)
     .addInput(credits, 10000)
     .addOutput(radian_sentirum, 3);
@@ -2314,7 +2315,7 @@ const craft_centaur = new Recipe("Craft Centaur", "Craft a Centaur from the blue
 
 const ceramic_dagger_blueprint = new Item("Ceramic Dagger Blueprint", "Blueprint obtained from Nightwave Offerings for 50 Nora Creds.");
 const buy_ceramic_dagger_blueprint = new Recipe("Buy Ceramic Dagger Blueprint", "Buy a Ceramic Dagger Blueprint from Nightwave Offerings for 50 Nora Creds.")
-    .addInput(nora_creds, 50)
+    .addInput(nora_cred, 50)
     .addOutput(ceramic_dagger_blueprint, 1);
 const ceramic_dagger = new Item("Ceramic Dagger", "Blueprint obtained from Nightwave Offerings for 50 Nora Creds.");
 const craft_ceramic_dagger = new Recipe("Craft Ceramic Dagger", "Craft a Ceramic Dagger from the blueprint.")
@@ -2559,6 +2560,7 @@ const corufell_barrel = new Item("Corufell Barrel", "Blueprint obtained from Tya
 const corufell_receiver = new Item("Corufell Receiver", "Blueprint obtained from Tyana Pass at Rotation B.");
 const corufell_handle = new Item("Corufell Handle", "Blueprint obtained from Tyana Pass at Rotation B.");
 const corufell_blueprint = new Item("Corufell Blueprint", "Blueprint obtained from Tyana Pass at Rotation A.");
+const corufell = new Item("Corufell", "Blueprint obtained from Tyana Pass at Rotation A.");
 const craft_corufell = new Recipe("Craft Corufell", "Craft a Corufell from the blueprint.")
     .addInput(corufell_blueprint, 1)
     .addInput(credits, 15000)
@@ -2576,6 +2578,7 @@ const corvas_barrel = new Item("Corvas Barrel", "Item obtained from Arbiters of 
 const corvas_receiver = new Item("Corvas Receiver", "Item obtained from Cephalon Suda for 20,000 standing at rank 2.");
 const corvas_stock = new Item("Corvas Stock", "Item obtained from Steel Meridian for 20,000 standing at rank 2.");
 const corvas_blueprint = new Item("Corvas Blueprint", "Blueprint obtained from the Market for 35,000 credits.");
+const corvas = new Item("Corvas", "Blueprint obtained from the Market for 35,000 credits.");
 const craft_corvas = new Recipe("Craft Corvas", "Craft a Corvas from the blueprint.")
     .addInput(corvas_blueprint, 1)
     .addInput(credits, 45000)
@@ -8104,14 +8107,15 @@ const equ_night_neuroptics_blueprint = new Item("Equinox Night Neuroptics Bluepr
 const equ_night_chassis_blueprint = new Item("Equinox Night Chassis Blueprint", "Blueprint obtained from the Tyl Regor assassination.");
 const equ_night_systems_blueprint = new Item("Equinox Night Systems Blueprint", "Blueprint obtained from the Tyl Regor assassination.");
 const equ_night_blueprint = new Item("Equinox Night Blueprint", "Blueprint obtained from the Tyl Regor assassination.");
-const equ_day_neuroptics = new Item("Equinox Day Neuroptics", "Warframe part obtained from crafting.")
-const equ_day_chassis = new Item("Equinox Day Chassis", "Warframe part obtained from crafting.")
-const equ_day_systems = new Item("Equinox Day Systems", "Warframe part obtained from crafting.")
-const equ_day = new Item("Equinox Day", "Warframe obtained from crafting.")
-const equ_night_neuroptics = new Item("Equinox Night Neuroptics", "Warframe part obtained from crafting.")
-const equ_night_chassis = new Item("Equinox Night Chassis", "Warframe part obtained from crafting.")
-const equ_night_systems = new Item("Equinox Night Systems", "Warframe part obtained from crafting.")
-const equ_night = new Item("Equinox Night", "Warframe obtained from crafting.")
+const equ_day_neuroptics = new Item("Equinox Day Neuroptics", "Warframe part obtained from crafting.");
+const equ_day_chassis = new Item("Equinox Day Chassis", "Warframe part obtained from crafting.");
+const equ_day_systems = new Item("Equinox Day Systems", "Warframe part obtained from crafting.");
+const equ_day = new Item("Equinox Day", "Warframe obtained from crafting.");
+const equ_night_neuroptics = new Item("Equinox Night Neuroptics", "Warframe part obtained from crafting.");
+const equ_night_chassis = new Item("Equinox Night Chassis", "Warframe part obtained from crafting.");
+const equ_night_systems = new Item("Equinox Night Systems", "Warframe part obtained from crafting.");
+const equ_night = new Item("Equinox Night", "Warframe obtained from crafting.");
+const equinox = new Item("Equinox", "Warframe obtained from crafting.");
 const craft_equ_day_neuroptics = new Recipe("Craft Equinox Day Neuroptics", "Craft Equinox Day Neuroptics from the blueprint.")
     .addInput(equ_day_neuroptics_blueprint, 1)
     .addInput(credits, 15000)
@@ -8195,6 +8199,7 @@ const excalibur_systems_blueprint = new Item("Excalibur Systems Blueprint", "Blu
 const excalibur_neuroptics = new Item("Excalibur Neuroptics", "Part obtained from the Lech Kril assassination.");
 const excalibur_chassis = new Item("Excalibur Chassis", "Part obtained from the Lech Kril assassination.");
 const excalibur_systems = new Item("Excalibur Systems", "Part obtained from the Lech Kril assassination.");
+const excalibur = new Item("Excalibur", "Warframe obtained from the Lech Kril assassination.");
 const craft_excalibur_neuroptics = new Recipe("Craft Excalibur Neuroptics", "Craft Excalibur Neuroptics from the blueprint.")
     .addInput(excalibur_neuroptics_blueprint, 1)
     .addInput(credits, 15000)
@@ -8241,6 +8246,7 @@ const frost_systems_blueprint = new Item("Frost Systems Blueprint", "Blueprint o
 const frost_neuroptics = new Item("Frost Neuroptics", "Part obtained from the Lech Kril and Vor assassination.");
 const frost_chassis = new Item("Frost Chassis", "Part obtained from the Lech Kril and Vor assassination.");
 const frost_systems = new Item("Frost Systems", "Part obtained from the Lech Kril and Vor assassination.");
+const frost = new Item("Frost", "Warframe obtained from the Lech Kril and Vor assassination.");
 const craft_frost_neuroptics = new Recipe("Craft Frost Neuroptics", "Craft Frost Neuroptics from the blueprint.")
     .addInput(frost_neuroptics_blueprint, 1)
     .addInput(credits, 15000)

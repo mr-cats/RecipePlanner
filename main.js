@@ -1,5 +1,5 @@
-import { CountMap } from "./countMap";
-import { warframe_handler } from "./warframe_preset";
+import { CountMap } from "./countMap.js";
+import { warframe_handler } from "./warframe_preset.js";
 
 const items = Array.from(warframe_handler.items.keys());
 const itemMap = warframe_handler.items;
@@ -45,6 +45,30 @@ const want = new CountMap(); // items we want to make
 const have = new CountMap(); // items we have
 const need = new CountMap(); // items we need to acquire
 const todo = new CountMap(); // recipes we need to perform
+
+window.onload = function() {
+    document.getElementById("debug").onclick = function() {
+        debug();
+    }
+}
+function debug() {
+    const wantSection = document.getElementById("want-container");
+    addToWant("Ash", 1);
+    wantSection.appendChild(makeWantItem("Ash"));
+    addToWant("Ash", 2);
+}
+
+// make a div for a want item that gets appended to want-section
+function makeWantItem(itemName) {
+    const item = itemMap.get(itemName);
+    const div = document.createElement("div");
+    div.classList.add("want-item");
+    div.innerHTML = `
+        <div class="want-item-name">${itemName}</div>
+        <div class="want-item-value">${want.getValue(itemName)} / ${want.getMax(itemName)}</div>
+    `;
+    return div;
+}
 
 // Add item to want
 function addToWant(itemName, quantity) {
