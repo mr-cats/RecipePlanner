@@ -51,7 +51,9 @@ const argon_crystal = new Item("Argon Crystal", "A rare crystal formed in the Or
 const ariette_scale = new Item("Ariette Scale", "A resource that can be found by feeding the maw in Duviri.");
 const breath_of_the_eidolon = new Item("Breath of the Eidolon", "A resource that can be obtained from Ostron bounties.");
 const carbides = new Item("Carbides", "An uncommon component that can be found from Eximus enemies on the Grineer Shipyard tileset.");
+const cetus_wisp = new Item("Cetus Wisp", "A rare component that can be found on the Plains of Eidolon.");
 const circuits = new Item("Circuits", "A common component that can be found on Venus, Ceres, and the Kuva Fortress.");
+const condroc_wing = new Item("Condroc Wing", "A resource that can be found on the Plains of Eidolon.");
 const connla_sprout = new Item("Connla Sprout", "A resource that can be found in Duviri.");
 const control_module = new Item("Control Module", "A component used in many weapons and Warframe parts.");
 const credits = new Item("Credits", "The standard currency of the Origin System.");
@@ -72,7 +74,9 @@ const gorgaricus_spore = new Item("Gorgaricus Spore", "A resource that can be fo
 const grokdrul = new Item("Grokdrul", "A resource that can be found in the Plains of Eidolon.");
 const hexenon = new Item("Hexenon", "A rare component that can be found on Jupiter and the Kuva Fortress.");
 const isos = new Item("Isos", "An uncommon component that can be found in Corpus Railjack missions.");
+const kavat_genetic_code = new Item("Kavat Genetic Code", "Obtained from scanning Kavats.");
 const kovnik = new Item("Kovnik", "A resource that can be found in Duviri.");
+const kuaka_spinal_claw = new Item("Kuaka Spinal Claw", "A resource that can be found on the Plains of Eidolon.");
 const kuva = new Item("Kuva", "A rare component that can be found on the Kuva Fortress.");
 const lamentus = new Item("Lamentus", "A resource that can be found in Duviri.");
 const lua_thrax_plasm = new Item("Lua Thrax Plasm", "Dropped by Thrax enemies on Lua.");
@@ -106,6 +110,7 @@ const tepa_nodule = new Item("Tepa Nodule", "A component found in the Orb Vallis
 const thermal_sludge = new Item("Thermal Sludge", "A resource that can be found in the Orb Vallis.");
 const thrax_plasm = new Item("Thrax Plasm", "Dropped by Thrax enemies in the Chrysalith.");
 const titanium = new Item("Titanium", "A component found in Railjack missions.");
+const vitus_essence = new Item("Vitus Essence", "A rare component that can be found in Arbitrations.");
 const void_traces = new Item("Void Traces", "A rare component that can be found on the Void.");
 const voidgel_orb = new Item("Voidgel Orb", "A rare component that can be found on the Chrysalith.");
 const voidplume_quill = new Item("Voidplume Quill", "Found in the Chrysalith.");
@@ -125,9 +130,13 @@ const exceptional_sentient_core = new Item("Exceptional Sentient Core", "A compo
 const eidolon_shard = new Item("Eidolon Shard", "A component dropped by Teralysts, Gantulysts, and Hydrolysts.");
 
 const atmo_systems = new Item("Atmo Systems", "Obtainable from Heist Bounties or Little Duck.");
+const calda_toroid = new Item("Calda Toroid", "Found in the Orb Vallis.");
 const crisma_toroid = new Item("Crisma Toroid", "Dropped by the Profit-Taker Orb.");
 const gyromag_systems = new Item("Gyromag Systems", "Obtainable from Heist Bounties or Little Duck.");
+const lazulite_toroid = new Item("Lazulite Toroid", "Found in the Orb Vallis.");
 const repeller_systems = new Item("Repeller Systems", "Obtainable from Heist Bounties or Little Duck.");
+const sola_toroid = new Item("Sola Toroid", "Found in the Orb Vallis.");
+const vega_toroid = new Item("Vega Toroid", "Found in the Orb Vallis.");
 
 // detonite injector
 
@@ -208,6 +217,7 @@ const holdfasts = new Item("Holdfasts Standing", "Standing acquired from the Hol
 const necraloid = new Item("Necraloid Standing", "Standing acquired from the Necraloid.");
 const solaris_united = new Item("Solaris United Standing", "Standing acquired from Solaris United.");
 const ventkids = new Item("Ventkids Standing", "Standing acquired from the Ventkids.");
+const vox_solaris = new Item("Vox Solaris Standing", "Standing acquired from Vox Solaris.");
 
 // not really standing but close
 const mother_token = new Item("Mother Token", "A currency used to purchase items from Mother.");
@@ -247,8 +257,12 @@ const iradite = new Item("Iradite", "A mineral found in the Plains of Eidolon.")
 const namalon = new Item("Namalon", "A gem found in the Cambion Drift.");
 const necrathene = new Item("Necrathene", "A gem found in the Cambion Drift.");
 const noctrul = new Item("Noctrul", "A gem found in the Orb Vallis.");
+const nyth = new Item("Nyth", "A gem found in the Plains of Eidolon.");
 const phasmin = new Item("Phasmin", "A gem found in the Orb Vallis.");
 const pyrol = new Item("Pyrol", "A mineral found in the Plains of Eidolon.");
+const sentirum = new Item("Sentirum", "A gem found in the Plains of Eidolon.");
+const thyst = new Item("Thyst", "A gem found in the Orb Vallis.");
+const tiametrite = new Item("Tiametrite", "A mineral found in the Cambion Drift.");
 const travoride = new Item("Travoride", "A gem found in the Orb Vallis.");
 const venerol = new Item("Venerol", "A mineral found in the Orb Vallis.");
 const veridos = new Item("Veridos", "A gem found in the Plains of Eidolon.");
@@ -311,6 +325,12 @@ const craft_esher_devar = new Recipe("Craft Esher Devar", "Reusable Blueprint fr
     .addInput(credits, 1000)
     .addOutput(esher_devar, 20);
 
+const faceted_tiametrite = new Item("Faceted Tiametrite", "A resource crafted from tiametrite.");
+const craft_faceted_tiametrite = new Recipe("Craft Faceted Tiametrite", "Reusable Blueprint from Otak at Entrati Rank 0.")
+    .addInput(tiametrite, 10)
+    .addInput(credits, 1000)
+    .addOutput(faceted_tiametrite, 10);
+
 const fersteel_alloy = new Item("Fersteel Alloy", "A resource crafted from ferros.");
 const craft_fersteel_alloy = new Recipe("Craft Fersteel Alloy", "Reusable Blueprint from Old Man Suumbat at rank Visitor.")
     .addInput(ferros, 20)
@@ -331,6 +351,12 @@ const craft_heart_noctrul = new Recipe("Craft Heart Noctrul", "Reusable Blueprin
     .addInput(credits, 1000)
     .addOutput(heart_noctrul, 10);
 
+const heart_nyth = new Item("Heart Nyth", "A resource crafted from nyth.");
+const craft_heart_nyth = new Recipe("Craft Heart Nyth", "Reusable Blueprint from Old Man Suumbaat.")
+    .addInput(nyth, 3)
+    .addInput(credits, 10000)
+    .addOutput(heart_nyth, 3);
+
 const hespazym_alloy = new Item("Hespazym Alloy", "A resource crafted from hesperon.");
 const craft_hespazym_alloy = new Recipe("Craft Hespazym Alloy", "Reusable Blueprint from Smokefinger at rank 2.")
     .addInput(hesperon, 20)
@@ -338,6 +364,12 @@ const craft_hespazym_alloy = new Recipe("Craft Hespazym Alloy", "Reusable Bluepr
     .addInput(plastids, 300)
     .addInput(morphics, 2)
     .addOutput(hespazym_alloy, 20);
+
+const marquise_thyst = new Item("Marquise Thyst", "A resource crafted from thyst.");
+const craft_marquise_thyst = new Recipe("Craft Marquise Thyst", "Reusable blueprint from Smokefinger.")
+    .addInput(thyst, 3)
+    .addInput(credits, 1000)
+    .addOutput(marquise_thyst, 3);
 
 const marquise_veridos = new Item("Marquise Veridos", "A resource crafted from veridos.");
 const craft_marquise_veridos = new Recipe("Craft Marquise Veridos", "Reusable Blueprint from Old Man Suumbaat at Rank 2.")
@@ -356,6 +388,20 @@ const craft_purified_heciphron = new Recipe("Craft Purified Heciphron", "Reusabl
     .addInput(heciphron, 10)
     .addInput(credits, 1000)
     .addOutput(purified_heciphron, 10);
+
+const pyrotic_alloy = new Item("Pyrotic Alloy", "A resource crafted from pyrol.");
+const craft_pyrotic_alloy = new Recipe("Craft Pyrotic Alloy", "Reusable Blueprint from Smokefinger at rank 2.")
+    .addInput(pyrol, 20)
+    .addInput(credits, 1000)
+    .addInput(cryotic, 200)
+    .addInput(rubedo, 50)
+    .addOutput(pyrotic_alloy, 20);
+
+const radian_sentirum = new Item("Radian Sentirum", "A resource crafted from sentirum.");
+const craft_radian_sentirum = new Item("Craft Radian Sentirum", "Reusable Blueprint from Old Man Suumbaat.")
+    .addInput(sentirum, 3)
+    .addInput(credits, 10000)
+    .addOutput(radian_sentirum, 3);
 
 const radiant_zodian = new Item("Radiant Zodian", "A resource crafted from zodian.");
 const craft_radiant_zodian = new Recipe("Craft Radiant Zodian", "Reusable Blueprint from Smokefinger at rank 3.")
@@ -436,6 +482,10 @@ const charamote_basic = new Item("Charamote (Basic)", "A servofish found in the 
 const charamote_adorned = new Item("Charamote (Adorned)", "A servofish found in the Orb Vallis.");
 const charamote_magnificent = new Item("Charamote (Magnificent)", "A servofish found in the Orb Vallis.");
 
+const charc_eel_small = new Item("Charc Eel (Small)", "A fish found in the Plains of Eidolon.");
+const charc_eel_medium = new Item("Charc Eel (Medium)", "A fish found in the Plains of Eidolon.");
+const charc_eel_large = new Item("Charc Eel (Large)", "A fish found in the Plains of Eidolon.");
+
 const chondrichord_small = new Item("Chondrichord (Small)", "A fish found in the Cambion Drift.");
 const chondrichord_medium = new Item("Chondrichord (Medium)", "A fish found in the Cambion Drift.");
 const chondrichord_large = new Item("Chondrichord (Large)", "A fish found in the Cambion Drift.");
@@ -480,6 +530,10 @@ const mortus_lungfish_small = new Item("Mortus Lungfish (Small)", "A fish found 
 const mortus_lungfish_medium = new Item("Mortus Lungfish (Medium)", "A fish found in the Plains of Eidolon.");
 const mortus_lungfish_large = new Item("Mortus Lungfish (Large)", "A fish found in the Plains of Eidolon."); 
 
+const murkray_small = new Item("Murkray (Small)", "A fish found in the Plains of Eidolon.");
+const murkray_medium = new Item("Murkray (Medium)", "A fish found in the Plains of Eidolon.");
+const murkray_large = new Item("Murkray (Large)", "A fish found in the Plains of Eidolon.");
+
 const myxostomata_basic = new Item("Myxostomata (Basic)", "A servofish found in the Cambion Drift.");
 const myxostomata_adorned = new Item("Myxostomata (Adorned)", "A servofish found in the Cambion Drift.");
 const myxostomata_magnificent = new Item("Myxostomata (Magnificent)", "A servofish found in the Cambion Drift.");
@@ -500,6 +554,10 @@ const tink_basic = new Item("Tink (Basic)", "A servofish found in the Orb Vallis
 const tink_adorned = new Item("Tink (Adorned)", "A servofish found in the Orb Vallis.");
 const tink_magnificent = new Item("Tink (Magnificent)", "A servofish found in the Orb Vallis.");
 
+const tralok_small = new Item("Tralok (Small)", "A fish found in the Plains of Eidolon.");
+const tralok_medium = new Item("Tralok (Medium)", "A fish found in the Plains of Eidolon.");
+const tralok_large = new Item("Tralok (Large)", "A fish found in the Plains of Eidolon.");
+
 const tromyzon_basic = new Item("Tromyzon (Basic)", "A servofish found in the Orb Vallis.");
 const tromyzon_adorned = new Item("Tromyzon (Adorned)", "A servofish found in the Orb Vallis.");
 const tromyzon_magnificent = new Item("Tromyzon (Magnificent)", "A servofish found in the Orb Vallis."); 
@@ -513,6 +571,7 @@ const vitreospina_magnificent = new Item("Vitreospina (Magnificent)", "A fish fo
 const benign_infested_tumor = new Item("Benign Infested Tumor", "A resource acquired from cutting all Deimos fish.");
 const biotic_filter = new Item("Biotic Filter", "A resource acquired from cutting some Deimos fish.");
 const charamote_sagan_module = new Item("Charamote Sagan Module", "A resource acquired from cutting Charamote.");
+const charc_electroplax = new Item("Charc Electroplax", "A resource acquired from cutting Charc Eels.");
 const cranial_foremount = new Item("Cranial Foremount", "A resource acquired from cutting Myxostomata.");
 const dendrite_blastoma = new Item("Dendrite Blastoma", "A resource acquired from cutting some Deimos fish.");
 const eye_eye_rotoblade = new Item("Eye-Eye Rotoblade", "A resource acquired from cutting Eye-Eye.");
@@ -524,6 +583,7 @@ const kriller_thermal_laser = new Item("Kriller Thermal Laser", "A resource acqu
 const longwinder_lathe_coagulant = new Item("Longwinder Lathe Coagulant", "A resource acquired from cutting Longwinder.");
 const mawfish_bones = new Item("Mawfish Bones", "A resource acquired from cutting Mawfish.");
 const mortus_horn = new Item("Mortus Horn", "A resource acquired from cutting Mortus Lungfish.");
+const murkray_liver = new Item("Murkray Liver", "A resource acquired from cutting Murkray.");
 const ocular_stem_root = new Item("Ocular Stem Root", "A resource acquired from cutting flagellocanth.");
 const parasitic_tethermaw = new Item("Parasitic Tethermaw", "A resource acquired from cutting Lobostriscid.");
 const pustulent_cognitive_nodule = new Item("Pustulent Cognitive Nodule", "A resource acquired from cutting some Deimos fish.");
@@ -534,6 +594,7 @@ const spinal_core_section = new Item("Spinal Core Section", "A resource acquired
 const sporulate_sac = new Item("Sporulate Sac", "A resource acquired from cutting Glutinox.");
 const synathid_ecosynth_analyzer = new Item("Synathid Ecosynth Analyzer", "A resource acquired from cutting Synathid.");
 const tink_dissipator_coil = new Item("Tink Dissipator Coil", "A resource acquired from cutting Tink.");
+const tralok_eyes = new Item("Tralok Eyes", "A resource acquired from cutting Tralok.");
 const tromyzon_entroplasma = new Item("Tromyzon Entroplasma", "A resource acquired from cutting Tromyzon.");
 const tubercular_gill_system = new Item("Tubercular Gill System", "A resource acquired from cutting some Deimos fish.");
 const waxen_sebum_deposit = new Item("Waxen Sebum Deposit", "A resource acquired from cutting Amniophysi.");
@@ -606,6 +667,25 @@ const cut_charamote_magnificent = new Recipe("Cut Charamote (Magnificent)", "Cut
     .addInput(charamote_magnificent, 1)
     .addOutput(scrap, 5)
     .addOutput(charamote_sagan_module, 1);
+
+const cut_charc_eel_small = new Recipe("Cut Charc Eel (Small)", "Cut a Charc Eel (Small) into parts.")
+    .addInput(charc_eel_small, 1)
+    .addOutput(fish_meat, 3)
+    .addOutput(fish_oil, 1)
+    .addOutput(fish_scales, 2)
+    .addOutput(charc_electroplax, 1);
+const cut_charc_eel_medium = new Recipe("Cut Charc Eel (Medium)", "Cut a Charc Eel (Medium) into parts.")
+    .addInput(charc_eel_medium, 1)
+    .addOutput(fish_meat, 4)
+    .addOutput(fish_oil, 2)
+    .addOutput(fish_scales, 3)
+    .addOutput(charc_electroplax, 1);
+const cut_charc_eel_large = new Recipe("Cut Charc Eel (Large)", "Cut a Charc Eel (Large) into parts.")
+    .addInput(charc_eel_large, 1)
+    .addOutput(fish_meat, 5)
+    .addOutput(fish_oil, 3)
+    .addOutput(fish_scales, 4)
+    .addOutput(charc_electroplax, 1);
 
 const cut_chondricord_small = new Recipe("Cut Chondricord (Small)", "Cut a Chondricord (Small) into parts.")
     .addInput(chondrichord_small, 1)
@@ -780,6 +860,25 @@ const cut_mortus_lungfish_large = new Recipe("Cut Mortus Lungfish (Large)", "Cut
     .addOutput(fish_scales, 3)
     .addOutput(mortus_horn, 1);
 
+const cut_murkray_small = new Recipe("Cut Murkray (Small)", "Cut a Murkray (Small) into parts.")
+    .addInput(murkray_small, 1)
+    .addOutput(fish_meat, 1)
+    .addOutput(fish_oil, 7)
+    .addOutput(fish_scales, 2)
+    .addOutput(murkray_liver, 1);
+const cut_murkray_medium = new Recipe("Cut Murkray (Medium)", "Cut a Murkray (Medium) into parts.")
+    .addInput(murkray_medium, 1)
+    .addOutput(fish_meat, 3)
+    .addOutput(fish_oil, 8)
+    .addOutput(fish_scales, 4)
+    .addOutput(murkray_liver, 1);
+const cut_murkray_large = new Recipe("Cut Murkray (Large)", "Cut a Murkray (Large) into parts.")
+    .addInput(murkray_large, 1)
+    .addOutput(fish_meat, 5)
+    .addOutput(fish_oil, 9)
+    .addOutput(fish_scales, 6)
+    .addOutput(murkray_liver, 1);
+
 const cut_myxostomata_basic = new Recipe("Cut Myxostomata (Basic)", "Cut a Myxostomata (Basic) into parts.")
     .addInput(myxostomata_basic, 1)
     .addOutput(benign_infested_tumor, 2)
@@ -853,6 +952,25 @@ const cut_tink_magnificent = new Recipe("Cut Tink (Magnificent)", "Cut a Tink (M
     .addInput(tink_magnificent, 1)
     .addOutput(scrap, 3)
     .addOutput(tink_dissipator_coil, 1);
+
+const cut_tralok_small = new Recipe("Cut Tralok (Small)", "Cut a Tralok (Small) into parts.")
+    .addInput(tralok_small, 1)
+    .addOutput(fish_meat, 2)
+    .addOutput(fish_oil, 1)
+    .addOutput(fish_scales, 5)
+    .addOutput(tralok_eyes, 1);
+const cut_tralok_medium = new Recipe("Cut Tralok (Medium)", "Cut a Tralok (Medium) into parts.")
+    .addInput(tralok_medium, 1)
+    .addOutput(fish_meat, 3)
+    .addOutput(fish_oil, 2)
+    .addOutput(fish_scales, 7)
+    .addOutput(tralok_eyes, 1);
+const cut_tralok_large = new Recipe("Cut Tralok (Large)", "Cut a Tralok (Large) into parts.")
+    .addInput(tralok_large, 1)
+    .addOutput(fish_meat, 4)
+    .addOutput(fish_oil, 3)
+    .addOutput(fish_scales, 9)
+    .addOutput(tralok_eyes, 1);
 
 const cut_tromyzon_basic = new Recipe("Cut Tromyzon (Basic)", "Cut a Tromyzon (Basic) into parts.")
     .addInput(tromyzon_basic, 1)
@@ -7551,6 +7669,1205 @@ const craft_vulcax = new Recipe("Craft Vulcax", "Craft a Vulcax from the bluepri
 // ------------------------
 
 // ash
+// bp market 35k
+// parts bp railjack missions
+
+const ash_neuroptics_blueprint = new Item("Ash Neuroptics Blueprint", "Blueprint obtained from Railjack missions.");
+const ash_chassis_blueprint = new Item("Ash Chassis Blueprint", "Blueprint obtained from Railjack missions.");
+const ash_systems_blueprint = new Item("Ash Systems Blueprint", "Blueprint obtained from Railjack missions.");
+const ash_blueprint = new Item("Ash Blueprint", "Blueprint obtained from the Market for 35,000 credits.");
+const buy_ash_blueprint = new Recipe("Buy Ash Blueprint", "Buy an Ash Blueprint from the Market for 35,000 credits.")
+    .addInput(credits, 35000)
+    .addOutput(ash_blueprint, 1);
+const ash_neuroptics = new Item("Ash Neuroptics", "Warframe part obtained from crafting.")
+const craft_ash_neuroptics = new Recipe("Craft Ash Neuroptics", "Craft Ash Neuroptics from the blueprint.")
+    .addInput(ash_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(alloy_plate, 150)
+    .addInput(neural_sensor, 1)
+    .addInput(polymer_bundle, 150)
+    .addInput(rubedo, 500)
+    .addOutput(ash_neuroptics, 1);
+const ash_chassis = new Item("Ash Chassis", "Warframe part obtained from crafting.")
+const craft_ash_chassis = new Recipe("Craft Ash Chassis", "Craft Ash Chassis from the blueprint.")
+    .addInput(ash_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(morphics, 1)
+    .addInput(ferrite, 1000)
+    .addInput(rubedo, 300)
+    .addOutput(ash_chassis, 1);
+const ash_systems = new Item("Ash Systems", "Warframe part obtained from crafting.")
+const craft_ash_systems = new Recipe("Craft Ash Systems", "Craft Ash Systems from the blueprint.")
+    .addInput(ash_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(control_module, 1)
+    .addInput(morphics, 1)
+    .addInput(salvage, 500)
+    .addInput(plastids, 500)
+    .addOutput(ash_systems, 1);
+const ash = new Item("Ash", "Warframe obtained from crafting.")
+const craft_ash = new Recipe("Craft Ash", "Craft Ash from the blueprint.")
+    .addInput(ash_blueprint, 1)
+    .addInput(ash_neuroptics, 1)
+    .addInput(ash_chassis, 1)
+    .addInput(ash_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 1)
+    .addOutput(ash, 1);
+
+// atlas
+// bp jordas precept quest
+// parts bp jordas golem assassination
+
+const atlas_neuroptics_blueprint = new Item("Atlas Neuroptics Blueprint", "Blueprint obtained from Jordas Golem Assassination.");
+const atlas_chassis_blueprint = new Item("Atlas Chassis Blueprint", "Blueprint obtained from Jordas Golem Assassination.");
+const atlas_systems_blueprint = new Item("Atlas Systems Blueprint", "Blueprint obtained from Jordas Golem Assassination.");
+const atlas_blueprint = new Item("Atlas Blueprint", "Blueprint obtained from the Jordas Precept quest.");
+const atlas_neuroptics = new Item("Atlas Neuroptics", "Warframe part obtained from crafting.")
+const craft_atlas_neuroptics = new Recipe("Craft Atlas Neuroptics", "Craft Atlas Neuroptics from the blueprint.")   
+    .addInput(atlas_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(polymer_bundle, 1400)
+    .addInput(alloy_plate, 1100)
+    .addInput(circuits, 800)
+    .addInput(neurodes, 5)
+    .addOutput(atlas_neuroptics, 1);
+const atlas_chassis = new Item("Atlas Chassis", "Warframe part obtained from crafting.")
+const craft_atlas_chassis = new Recipe("Craft Atlas Chassis", "Craft Atlas Chassis from the blueprint.")    
+    .addInput(atlas_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(nano_spores, 1800)
+    .addInput(cryotic, 1300)
+    .addInput(rubedo, 700)
+    .addInput(argon_crystal, 2)
+    .addOutput(atlas_chassis, 1);
+const atlas_systems = new Item("Atlas Systems", "Warframe part obtained from crafting.")
+const craft_atlas_systems = new Recipe("Craft Atlas Systems", "Craft Atlas Systems from the blueprint.")    
+    .addInput(atlas_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(ferrite, 4600)
+    .addInput(polymer_bundle, 1700)
+    .addInput(morphics, 5)
+    .addInput(orokin_cell, 1)
+    .addOutput(atlas_systems, 1);
+const atlas = new Item("Atlas", "Warframe obtained from crafting.")
+const craft_atlas = new Recipe("Craft Atlas", "Craft Atlas from the blueprint.")
+    .addInput(atlas_blueprint, 1)
+    .addInput(atlas_neuroptics, 1)
+    .addInput(atlas_chassis, 1)
+    .addInput(atlas_systems, 1)
+    .addInput(credits, 30000)
+    .addInput(orokin_cell, 1)
+    .addOutput(atlas, 1);
+
+// banshee
+// bp tenno lab 35k
+// parts bp tenno lab 15k
+
+const banshee_blueprint = new Item("Banshee Blueprint", "Blueprint obtained from the Tenno Lab in the Dojo for 35,000 credits.");
+const buy_banshee_blueprint = new Recipe("Buy Banshee Blueprint", "Buy a Banshee Blueprint from the Tenno Lab in the Dojo for 35,000 credits.")
+    .addInput(credits, 35000)
+    .addOutput(banshee_blueprint, 1);
+const banshee_neuroptics_blueprint = new Item("Banshee Neuroptics Blueprint", "Blueprint obtained from the Tenno Lab in the Dojo for 15,000 credits.");
+const buy_banshee_neuroptics_blueprint = new Recipe("Buy Banshee Neuroptics Blueprint", "Buy a Banshee Neuroptics Blueprint from the Tenno Lab in the Dojo for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(banshee_neuroptics_blueprint, 1);
+const banshee_chassis_blueprint = new Item("Banshee Chassis Blueprint", "Blueprint obtained from the Tenno Lab in the Dojo for 15,000 credits.");
+const buy_banshee_chassis_blueprint = new Recipe("Buy Banshee Chassis Blueprint", "Buy a Banshee Chassis Blueprint from the Tenno Lab in the Dojo for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(banshee_chassis_blueprint, 1);
+const banshee_systems_blueprint = new Item("Banshee Systems Blueprint", "Blueprint obtained from the Tenno Lab in the Dojo for 15,000 credits.");
+const buy_banshee_systems_blueprint = new Recipe("Buy Banshee Systems Blueprint", "Buy a Banshee Systems Blueprint from the Tenno Lab in the Dojo for 15,000 credits.")
+    .addInput(credits, 15000)
+    .addOutput(banshee_systems_blueprint, 1);
+const banshee_neuroptics = new Item("Banshee Neuroptics", "Warframe part obtained from crafting.")
+const craft_banshee_neuroptics = new Recipe("Craft Banshee Neuroptics", "Craft Banshee Neuroptics from the blueprint.")
+    .addInput(banshee_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(circuits, 150)
+    .addInput(neural_sensor, 1)
+    .addInput(polymer_bundle, 200)
+    .addInput(salvage, 500)
+    .addOutput(banshee_neuroptics, 1);
+const banshee_chassis = new Item("Banshee Chassis", "Warframe part obtained from crafting.")
+const craft_banshee_chassis = new Recipe("Craft Banshee Chassis", "Craft Banshee Chassis from the blueprint.")
+    .addInput(banshee_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(morphics, 1)
+    .addInput(ferrite, 900)
+    .addInput(rubedo, 50)
+    .addOutput(banshee_chassis, 1);
+const banshee_systems = new Item("Banshee Systems", "Warframe part obtained from crafting.")
+const craft_banshee_systems = new Recipe("Craft Banshee Systems", "Craft Banshee Systems from the blueprint.")
+    .addInput(banshee_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(control_module, 1)
+    .addInput(morphics, 1)
+    .addInput(salvage, 500)
+    .addInput(plastids, 400)
+    .addOutput(banshee_systems, 1);
+const banshee = new Item("Banshee", "Warframe obtained from crafting.")
+const craft_banshee = new Recipe("Craft Banshee", "Craft Banshee from the blueprint.")
+    .addInput(banshee_blueprint, 1)
+    .addInput(banshee_neuroptics, 1)
+    .addInput(banshee_chassis, 1)
+    .addInput(banshee_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 1)
+    .addOutput(banshee, 1);
+
+// baruuk
+// bp little duck 5k rank 2
+// parts bp little duck 5k rank 3
+
+const baruuk_blueprint = new Item("Baruuk Blueprint", "Blueprint obtained from Little Duck in Fortuna for 5,000 standing at rank 2.");
+const buy_baruuk_blueprint = new Recipe("Buy Baruuk Blueprint", "Buy a Baruuk Blueprint from Little Duck in Fortuna for 5,000 standing at rank 2.")
+    .addInput(vox_solaris, 5000)
+    .addOutput(baruuk_blueprint, 1);
+const baruuk_neuroptics_blueprint = new Item("Baruuk Neuroptics Blueprint", "Blueprint obtained from Little Duck in Fortuna for 5,000 standing at rank 3.");
+const buy_baruuk_neuroptics_blueprint = new Recipe("Buy Baruuk Neuroptics Blueprint", "Buy a Baruuk Neuroptics Blueprint from Little Duck in Fortuna for 5,000 standing at rank 3.")
+    .addInput(vox_solaris, 5000)
+    .addOutput(baruuk_neuroptics_blueprint, 1);
+const baruuk_chassis_blueprint = new Item("Baruuk Chassis Blueprint", "Blueprint obtained from Little Duck in Fortuna for 5,000 standing at rank 3.");
+const buy_baruuk_chassis_blueprint = new Recipe("Buy Baruuk Chassis Blueprint", "Buy a Baruuk Chassis Blueprint from Little Duck in Fortuna for 5,000 standing at rank 3.")
+    .addInput(vox_solaris, 5000)
+    .addOutput(baruuk_chassis_blueprint, 1);
+const baruuk_systems_blueprint = new Item("Baruuk Systems Blueprint", "Blueprint obtained from Little Duck in Fortuna for 5,000 standing at rank 3.");
+const buy_baruuk_systems_blueprint = new Recipe("Buy Baruuk Systems Blueprint", "Buy a Baruuk Systems Blueprint from Little Duck in Fortuna for 5,000 standing at rank 3.")
+    .addInput(vox_solaris, 5000)
+    .addOutput(baruuk_systems_blueprint, 1);
+const baruuk_neuroptics = new Item("Baruuk Neuroptics", "Warframe part obtained from crafting.")
+const craft_baruuk_neuroptics = new Recipe("Craft Baruuk Neuroptics", "Craft Baruuk Neuroptics from the blueprint.")
+    .addInput(baruuk_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(sola_toroid, 3)
+    .addInput(alloy_plate, 2850)
+    .addInput(hespazym_alloy, 50)
+    .addInput(synathid_ecosynth_analyzer, 5)
+    .addOutput(baruuk_neuroptics, 1);
+const baruuk_chassis = new Item("Baruuk Chassis", "Warframe part obtained from crafting.")
+const craft_baruuk_chassis = new Recipe("Craft Baruuk Chassis", "Craft Baruuk Chassis from the blueprint.") 
+    .addInput(baruuk_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(sola_toroid, 3)
+    .addInput(salvage, 3250)
+    .addInput(hespazym_alloy, 100)
+    .addInput(marquise_thyst, 5)
+    .addOutput(baruuk_chassis, 1);
+const baruuk_systems = new Item("Baruuk Systems", "Warframe part obtained from crafting.")
+const craft_baruuk_systems = new Recipe("Craft Baruuk Systems", "Craft Baruuk Systems from the blueprint.")
+    .addInput(baruuk_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(calda_toroid, 3)
+    .addInput(ferrite, 2500)
+    .addInput(tromyzon_entroplasma, 10)
+    .addInput(radiant_zodian, 5)
+    .addOutput(baruuk_systems, 1);
+const baruuk = new Item("Baruuk", "Warframe obtained from crafting.")
+const craft_baruuk = new Recipe("Craft Baruuk", "Craft Baruuk from the blueprint.")
+    .addInput(baruuk_blueprint, 1)
+    .addInput(baruuk_neuroptics, 1)
+    .addInput(baruuk_chassis, 1)
+    .addInput(baruuk_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 1)
+    .addOutput(baruuk, 1);
+
+// caliban
+// bp and parts bp from narmer bounties
+
+const caliban_blueprint = new Item("Caliban Blueprint", "Blueprint obtained from Narmer Bounties in Cetus and Fortuna.");
+const caliban_neuroptics_blueprint = new Item("Caliban Neuroptics Blueprint", "Blueprint obtained from Narmer Bounties in Cetus and Fortuna.");
+const caliban_chassis_blueprint = new Item("Caliban Chassis Blueprint", "Blueprint obtained from Narmer Bounties in Cetus and Fortuna.");
+const caliban_systems_blueprint = new Item("Caliban Systems Blueprint", "Blueprint obtained from Narmer Bounties in Cetus and Fortuna.");
+const caliban_neuroptics = new Item("Caliban Neuroptics", "Warframe part obtained from crafting.")
+const caliban_chassis = new Item("Caliban Chassis", "Warframe part obtained from crafting.")
+const caliban_systems = new Item("Caliban Systems", "Warframe part obtained from crafting.")
+const caliban = new Item("Caliban", "Warframe obtained from crafting.")
+const craft_caliban_neuroptics = new Recipe("Craft Caliban Neuroptics", "Craft Caliban Neuroptics from the blueprint.")
+    .addInput(caliban_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(anomaly_shard, 3)
+    .addInput(narmer_isoplast, 12)
+    .addInput(neural_sensor, 10)
+    .addInput(tralok_eyes, 20)
+    .addOutput(caliban_neuroptics, 1);
+const craft_caliban_chassis = new Recipe("Craft Caliban Chassis", "Craft Caliban Chassis from the blueprint.")
+    .addInput(caliban_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(anomaly_shard, 3)
+    .addInput(narmer_isoplast, 16)
+    .addInput(mortus_horn, 20)
+    .addInput(hespazym_alloy, 100)
+    .addOutput(caliban_chassis, 1);
+const craft_caliban_systems = new Recipe("Craft Caliban Systems", "Craft Caliban Systems from the blueprint.")
+    .addInput(caliban_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(anomaly_shard, 3)
+    .addInput(narmer_isoplast, 12)
+    .addInput(breath_of_the_eidolon, 30)
+    .addInput(hexenon, 30)
+    .addOutput(caliban_systems, 1);
+const craft_caliban = new Recipe("Craft Caliban", "Craft Caliban from the blueprint.")
+    .addInput(caliban_blueprint, 1)
+    .addInput(caliban_neuroptics, 1)
+    .addInput(caliban_chassis, 1)
+    .addInput(caliban_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 12)
+    .addOutput(caliban, 1);
+
+// citrine
+// bp and parts bp from mirror defense C rotation
+
+const citrine_blueprint = new Item("Citrine Blueprint", "Blueprint obtained from the Mirror Defense C Rotation.");
+const citrine_neuroptics_blueprint = new Item("Citrine Neuroptics Blueprint", "Blueprint obtained from the Mirror Defense C Rotation.");
+const citrine_chassis_blueprint = new Item("Citrine Chassis Blueprint", "Blueprint obtained from the Mirror Defense C Rotation.");
+const citrine_systems_blueprint = new Item("Citrine Systems Blueprint", "Blueprint obtained from the Mirror Defense C Rotation.");
+const citrine_neuroptics = new Item("Citrine Neuroptics", "Warframe part obtained from crafting.")
+const citrine_chassis = new Item("Citrine Chassis", "Warframe part obtained from crafting.")
+const citrine_systems = new Item("Citrine Systems", "Warframe part obtained from crafting.")
+const citrine = new Item("Citrine", "Warframe obtained from crafting.")
+const craft_citrine_neuroptics = new Recipe("Craft Citrine Neuroptics", "Craft Citrine Neuroptics from the blueprint.")
+    .addInput(citrine_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(rubedo, 1000)
+    .addInput(salvage, 1500)
+    .addInput(faceted_tiametrite, 15)
+    .addInput(argon_crystal, 2)
+    .addOutput(citrine_neuroptics, 1);
+const craft_citrine_chassis = new Recipe("Craft Citrine Chassis", "Craft Citrine Chassis from the blueprint.")
+    .addInput(citrine_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(cryotic, 1200)
+    .addInput(alloy_plate, 3000)
+    .addInput(stellated_necrathene, 6)
+    .addInput(nano_spores, 2000)
+    .addOutput(citrine_chassis, 1);
+const craft_citrine_systems = new Recipe("Craft Citrine Systems", "Craft Citrine Systems from the blueprint.")
+    .addInput(citrine_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(circuits, 1500)
+    .addInput(polymer_bundle, 1500)
+    .addInput(gallium, 3)
+    .addInput(morphics, 2)
+    .addOutput(citrine_systems, 1);
+const craft_citrine = new Recipe("Craft Citrine", "Craft Citrine from the blueprint.")
+    .addInput(citrine_blueprint, 1)
+    .addInput(citrine_neuroptics, 1)
+    .addInput(citrine_chassis, 1)
+    .addInput(citrine_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 3)
+    .addOutput(citrine, 1);
+
+// ember
+// bp market 25k
+// parts bp from sargas ruk assassination
+
+const ember_blueprint = new Item("Ember Blueprint", "Blueprint obtained from the Market for 25,000 credits.");
+const buy_ember_blueprint = new Recipe("Buy Ember Blueprint", "Buy an Ember Blueprint from the Market for 25,000 credits.")
+    .addInput(credits, 25000)
+    .addOutput(ember_blueprint, 1);
+const ember_neuroptics_blueprint = new Item("Ember Neuroptics Blueprint", "Blueprint obtained from the Sargas Ruk assassination.");
+const ember_chassis_blueprint = new Item("Ember Chassis Blueprint", "Blueprint obtained from the Sargas Ruk assassination.");
+const ember_systems_blueprint = new Item("Ember Systems Blueprint", "Blueprint obtained from the Sargas Ruk assassination.");
+const ember_neuroptics = new Item("Ember Neuroptics", "Warframe part obtained from crafting.")
+const ember_chassis = new Item("Ember Chassis", "Warframe part obtained from crafting.")
+const ember_systems = new Item("Ember Systems", "Warframe part obtained from crafting.")
+const ember = new Item("Ember", "Warframe obtained from crafting.")
+const craft_ember_neuroptics = new Recipe("Craft Ember Neuroptics", "Craft Ember Neuroptics from the blueprint.")
+    .addInput(ember_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(alloy_plate, 150)
+    .addInput(neural_sensor, 1)
+    .addInput(polymer_bundle, 150)
+    .addInput(rubedo, 500)
+    .addOutput(ember_neuroptics, 1);
+const craft_ember_chassis = new Recipe("Craft Ember Chassis", "Craft Ember Chassis from the blueprint.")
+    .addInput(ember_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(morphics, 1)
+    .addInput(ferrite, 1000)
+    .addInput(rubedo, 300)
+    .addOutput(ember_chassis, 1);
+const craft_ember_systems = new Recipe("Craft Ember Systems", "Craft Ember Systems from the blueprint.")
+    .addInput(ember_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(control_module, 1)
+    .addInput(morphics, 1)
+    .addInput(salvage, 500)
+    .addInput(plastids, 220)
+    .addOutput(ember_systems, 1);
+const craft_ember = new Recipe("Craft Ember", "Craft Ember from the blueprint.")
+    .addInput(ember_blueprint, 1)
+    .addInput(ember_neuroptics, 1)
+    .addInput(ember_chassis, 1)
+    .addInput(ember_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 1)
+    .addOutput(ember, 1);
+
+// equinox
+// bp market 25k
+// parts bp from tyl regor assassination
+
+const equinox_blueprint = new Item("Equinox Blueprint", "Blueprint obtained from the Market for 25,000 credits.");
+const buy_equinox_blueprint = new Recipe("Buy Equinox Blueprint", "Buy an Equinox Blueprint from the Market for 25,000 credits.")
+    .addInput(credits, 25000)
+    .addOutput(equinox_blueprint, 1);
+const equ_day_neuroptics_blueprint = new Item("Equinox Day Neuroptics Blueprint", "Blueprint obtained from the Tyl Regor assassination.");
+const equ_day_chassis_blueprint = new Item("Equinox Day Chassis Blueprint", "Blueprint obtained from the Tyl Regor assassination.");
+const equ_day_systems_blueprint = new Item("Equinox Day Systems Blueprint", "Blueprint obtained from the Tyl Regor assassination.");
+const equ_day_blueprint = new Item("Equinox Day Blueprint", "Blueprint obtained from the Tyl Regor assassination.");
+const equ_night_neuroptics_blueprint = new Item("Equinox Night Neuroptics Blueprint", "Blueprint obtained from the Tyl Regor assassination.");
+const equ_night_chassis_blueprint = new Item("Equinox Night Chassis Blueprint", "Blueprint obtained from the Tyl Regor assassination.");
+const equ_night_systems_blueprint = new Item("Equinox Night Systems Blueprint", "Blueprint obtained from the Tyl Regor assassination.");
+const equ_night_blueprint = new Item("Equinox Night Blueprint", "Blueprint obtained from the Tyl Regor assassination.");
+const equ_day_neuroptics = new Item("Equinox Day Neuroptics", "Warframe part obtained from crafting.")
+const equ_day_chassis = new Item("Equinox Day Chassis", "Warframe part obtained from crafting.")
+const equ_day_systems = new Item("Equinox Day Systems", "Warframe part obtained from crafting.")
+const equ_day = new Item("Equinox Day", "Warframe obtained from crafting.")
+const equ_night_neuroptics = new Item("Equinox Night Neuroptics", "Warframe part obtained from crafting.")
+const equ_night_chassis = new Item("Equinox Night Chassis", "Warframe part obtained from crafting.")
+const equ_night_systems = new Item("Equinox Night Systems", "Warframe part obtained from crafting.")
+const equ_night = new Item("Equinox Night", "Warframe obtained from crafting.")
+const craft_equ_day_neuroptics = new Recipe("Craft Equinox Day Neuroptics", "Craft Equinox Day Neuroptics from the blueprint.")
+    .addInput(equ_day_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(alloy_plate, 150)
+    .addInput(neural_sensor, 1)
+    .addInput(ferrite, 150)
+    .addInput(rubedo, 500)
+    .addOutput(equ_day_neuroptics, 1);
+const craft_equ_day_chassis = new Recipe("Craft Equinox Day Chassis", "Craft Equinox Day Chassis from the blueprint.")
+    .addInput(equ_day_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(gallium, 1)
+    .addInput(ferrite, 1000)
+    .addInput(rubedo, 300)
+    .addOutput(equ_day_chassis, 1);
+const craft_equ_day_systems = new Recipe("Craft Equinox Day Systems", "Craft Equinox Day Systems from the blueprint.")
+    .addInput(equ_day_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(control_module, 1)
+    .addInput(gallium, 1)
+    .addInput(salvage, 500)
+    .addInput(rubedo, 500)
+    .addOutput(equ_day_systems, 1);
+const craft_equ_day = new Recipe("Craft Equinox Day", "Craft Equinox Day from the blueprint.")
+    .addInput(equ_day_blueprint, 1)
+    .addInput(equ_day_neuroptics, 1)
+    .addInput(equ_day_chassis, 1)
+    .addInput(equ_day_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 1)
+    .addOutput(equ_day, 1);
+const craft_equ_night_neuroptics = new Recipe("Craft Equinox Night Neuroptics", "Craft Equinox Night Neuroptics from the blueprint.")
+    .addInput(equ_night_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(alloy_plate, 150)
+    .addInput(neural_sensor, 1)
+    .addInput(polymer_bundle, 150)
+    .addInput(plastids, 500)
+    .addOutput(equ_night_neuroptics, 1);
+const craft_equ_night_chassis = new Recipe("Craft Equinox Night Chassis", "Craft Equinox Night Chassis from the blueprint.")
+    .addInput(equ_night_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(morphics, 1)
+    .addInput(polymer_bundle, 1000)
+    .addInput(plastids, 300)
+    .addOutput(equ_night_chassis, 1);
+const craft_equ_night_systems = new Recipe("Craft Equinox Night Systems", "Craft Equinox Night Systems from the blueprint.")
+    .addInput(equ_night_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(control_module, 1)
+    .addInput(morphics, 1)
+    .addInput(nano_spores, 500)
+    .addInput(plastids, 500)
+    .addOutput(equ_night_systems, 1);
+const craft_equ_night = new Recipe("Craft Equinox Night", "Craft Equinox Night from the blueprint.")
+    .addInput(equ_night_blueprint, 1)
+    .addInput(equ_night_neuroptics, 1)
+    .addInput(equ_night_chassis, 1)
+    .addInput(equ_night_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 1)
+    .addOutput(equ_night, 1);
+const craft_equinox = new Recipe("Craft Equinox", "Craft Equinox from the blueprints.")
+    .addInput(equ_day, 1)
+    .addInput(equ_night, 1)
+    .addInput(forma, 1)
+    .addInput(credits, 25000)
+    .addOutput(equinox, 1);
+
+// excalibur
+// bp market 35k
+// parts bp lech kril assassination
+
+const excalibur_blueprint = new Item("Excalibur Blueprint", "Blueprint obtained from the Market for 35,000 credits.");
+const buy_excalibur_blueprint = new Recipe("Buy Excalibur Blueprint", "Buy an Excalibur Blueprint from the Market for 35,000 credits.")
+    .addInput(credits, 35000)
+    .addOutput(excalibur_blueprint, 1);
+const excalibur_neuroptics_blueprint = new Item("Excalibur Neuroptics Blueprint", "Blueprint obtained from the Lech Kril assassination.");
+const excalibur_chassis_blueprint = new Item("Excalibur Chassis Blueprint", "Blueprint obtained from the Lech Kril assassination.");
+const excalibur_systems_blueprint = new Item("Excalibur Systems Blueprint", "Blueprint obtained from the Lech Kril assassination.");
+const excalibur_neuroptics = new Item("Excalibur Neuroptics", "Part obtained from the Lech Kril assassination.");
+const excalibur_chassis = new Item("Excalibur Chassis", "Part obtained from the Lech Kril assassination.");
+const excalibur_systems = new Item("Excalibur Systems", "Part obtained from the Lech Kril assassination.");
+const craft_excalibur_neuroptics = new Recipe("Craft Excalibur Neuroptics", "Craft Excalibur Neuroptics from the blueprint.")
+    .addInput(excalibur_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(alloy_plate, 150)
+    .addInput(neural_sensor, 1)
+    .addInput(polymer_bundle, 150)
+    .addInput(rubedo, 500)
+    .addOutput(excalibur_neuroptics, 1);
+const craft_excalibur_chassis = new Recipe("Craft Excalibur Chassis", "Craft Excalibur Chassis from the blueprint.")
+    .addInput(excalibur_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(morphics, 1)
+    .addInput(ferrite, 1000)
+    .addInput(rubedo, 300)
+    .addOutput(excalibur_chassis, 1);
+const craft_excalibur_systems = new Recipe("Craft Excalibur Systems", "Craft Excalibur Systems from the blueprint.")
+    .addInput(excalibur_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(control_module, 1)
+    .addInput(morphics, 1)
+    .addInput(salvage, 500)
+    .addInput(plastids, 220)
+    .addOutput(excalibur_systems, 1);
+const craft_excalibur = new Recipe("Craft Excalibur", "Craft Excalibur from the blueprints.")
+    .addInput(excalibur_blueprint, 1)
+    .addInput(excalibur_neuroptics, 1)
+    .addInput(excalibur_chassis, 1)
+    .addInput(excalibur_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 1)
+    .addOutput(excalibur, 1);
+
+// frost
+// bp market 25k
+// parts bp lech kril and vor assassination
+
+const frost_blueprint = new Item("Frost Blueprint", "Blueprint obtained from the Market for 25,000 credits.");
+const buy_frost_blueprint = new Recipe("Buy Frost Blueprint", "Buy a Frost Blueprint from the Market for 25,000 credits.")
+    .addInput(credits, 25000)
+    .addOutput(frost_blueprint, 1);
+const frost_neuroptics_blueprint = new Item("Frost Neuroptics Blueprint", "Blueprint obtained from the Lech Kril and Vor assassination.");
+const frost_chassis_blueprint = new Item("Frost Chassis Blueprint", "Blueprint obtained from the Lech Kril and Vor assassination.");
+const frost_systems_blueprint = new Item("Frost Systems Blueprint", "Blueprint obtained from the Lech Kril and Vor assassination.");
+const frost_neuroptics = new Item("Frost Neuroptics", "Part obtained from the Lech Kril and Vor assassination.");
+const frost_chassis = new Item("Frost Chassis", "Part obtained from the Lech Kril and Vor assassination.");
+const frost_systems = new Item("Frost Systems", "Part obtained from the Lech Kril and Vor assassination.");
+const craft_frost_neuroptics = new Recipe("Craft Frost Neuroptics", "Craft Frost Neuroptics from the blueprint.")
+    .addInput(frost_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(alloy_plate, 150)
+    .addInput(neural_sensor, 1)
+    .addInput(polymer_bundle, 150)
+    .addInput(rubedo, 500)
+    .addOutput(frost_neuroptics, 1);
+const craft_frost_chassis = new Recipe("Craft Frost Chassis", "Craft Frost Chassis from the blueprint.")
+    .addInput(frost_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(morphics, 1)
+    .addInput(ferrite, 1000)
+    .addInput(rubedo, 300)
+    .addOutput(frost_chassis, 1);
+const craft_frost_systems = new Recipe("Craft Frost Systems", "Craft Frost Systems from the blueprint.")
+    .addInput(frost_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(control_module, 1)
+    .addInput(morphics, 1)
+    .addInput(salvage, 500)
+    .addInput(plastids, 500)
+    .addOutput(frost_systems, 1);
+const craft_frost = new Recipe("Craft Frost", "Craft Frost from the blueprints.")
+    .addInput(frost_blueprint, 1)
+    .addInput(frost_neuroptics, 1)
+    .addInput(frost_chassis, 1)
+    .addInput(frost_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 1)
+    .addOutput(frost, 1);
+
+// gara
+// bp sayas vigil quest
+// parts bp bounties cetus
+
+const gara_blueprint = new Item("Gara Blueprint", "Blueprint obtained from the Saya's Vigil quest.");
+const gara_neuroptics_blueprint = new Item("Gara Neuroptics Blueprint", "Blueprint obtained from the Cetus bounties.");
+const gara_chassis_blueprint = new Item("Gara Chassis Blueprint", "Blueprint obtained from the Cetus bounties.");
+const gara_systems_blueprint = new Item("Gara Systems Blueprint", "Blueprint obtained from the Cetus bounties.");
+const gara_neuroptics = new Item("Gara Neuroptics", "Part obtained from the Cetus bounties.");
+const gara_chassis = new Item("Gara Chassis", "Part obtained from the Cetus bounties.");
+const gara_systems = new Item("Gara Systems", "Part obtained from the Cetus bounties.");
+const craft_gara_neuroptics = new Recipe("Craft Gara Neuroptics", "Craft Gara Neuroptics from the blueprint.")
+    .addInput(gara_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(neurodes, 2)
+    .addInput(grokdrul, 65)
+    .addInput(pyrotic_alloy, 90)
+    .addInput(circuits, 700)
+    .addOutput(gara_neuroptics, 1);
+const craft_gara_chassis = new Recipe("Craft Gara Chassis", "Craft Gara Chassis from the blueprint.")
+    .addInput(gara_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(cetus_wisp, 2)
+    .addInput(coprite_alloy, 120)
+    .addInput(iradite, 55)
+    .addInput(rubedo, 800)
+    .addOutput(gara_chassis, 1);
+const craft_gara_systems = new Recipe("Craft Gara Systems", "Craft Gara Systems from the blueprint.")
+    .addInput(gara_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(morphics, 2)
+    .addInput(charc_electroplax, 35)
+    .addInput(esher_devar, 25)
+    .addInput(circuits, 850)
+    .addOutput(gara_systems, 1);
+
+// garuda
+// bp vox solaris quest
+// parts bp fortuna bounties
+
+const garuda_blueprint = new Item("Garuda Blueprint", "Blueprint obtained from the Vox Solaris quest.");
+const garuda_neuroptics_blueprint = new Item("Garuda Neuroptics Blueprint", "Blueprint obtained from Fortuna bounties.");
+const garuda_chassis_blueprint = new Item("Garuda Chassis Blueprint", "Blueprint obtained from Fortuna bounties.");
+const garuda_systems_blueprint = new Item("Garuda Systems Blueprint", "Blueprint obtained from Fortuna bounties.");
+const garuda_neuroptics = new Item("Garuda Neuroptics", "Part obtained from Fortuna bounties.");
+const garuda_chassis = new Item("Garuda Chassis", "Part obtained from Fortuna bounties.");
+const garuda_systems = new Item("Garuda Systems", "Part obtained from Fortuna bounties.");
+const garuda = new Item("Garuda", "Warframe obtained from the blueprints.");
+const craft_garuda_neuroptics = new Recipe("Craft Garuda Neuroptics", "Craft Garuda Neuroptics from the blueprint.")
+    .addInput(garuda_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(vega_toroid, 2)
+    .addInput(star_amarast, 6)
+    .addInput(axidrol_alloy, 40)
+    .addInput(nano_spores, 5000)
+    .addOutput(garuda_neuroptics, 1);
+const craft_garuda_chassis = new Recipe("Craft Garuda Chassis", "Craft Garuda Chassis from the blueprint.")
+    .addInput(garuda_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(calda_toroid, 2)
+    .addInput(radiant_zodian, 3)
+    .addInput(travocyte_alloy, 40)
+    .addInput(alloy_plate, 2200)
+    .addOutput(garuda_chassis, 1);
+const craft_garuda_systems = new Recipe("Craft Garuda Systems", "Craft Garuda Systems from the blueprint.")
+    .addInput(garuda_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(sola_toroid, 2)
+    .addInput(marquise_thyst, 3)
+    .addInput(venerdo_alloy, 40)
+    .addInput(polymer_bundle, 2400)
+    .addOutput(garuda_systems, 1);
+const craft_garuda = new Recipe("Craft Garuda", "Craft Garuda from the blueprints.")
+    .addInput(garuda_blueprint, 1)
+    .addInput(garuda_neuroptics, 1)
+    .addInput(garuda_chassis, 1)
+    .addInput(garuda_systems, 1)
+    .addInput(kuva, 3500)
+    .addInput(credits, 25000)
+    .addOutput(garuda, 1);
+
+// gauss
+// bp market 30k
+// parts bp disruption sedna c rotation
+
+const gauss_blueprint = new Item("Gauss Blueprint", "Blueprint obtained from the Market for 30,000 credits.");
+const buy_gauss_blueprint = new Recipe("Buy Gauss Blueprint", "Buy a Gauss Blueprint from the Market for 30,000 credits.")
+    .addInput(credits, 30000)
+    .addOutput(gauss_blueprint, 1);
+const gauss_neuroptics_blueprint = new Item("Gauss Neuroptics Blueprint", "Blueprint obtained from Disruption on Sedna, rotation C.");
+const gauss_chassis_blueprint = new Item("Gauss Chassis Blueprint", "Blueprint obtained from Disruption on Sedna, rotation C.");
+const gauss_systems_blueprint = new Item("Gauss Systems Blueprint", "Blueprint obtained from Disruption on Sedna, rotation C.");
+const gauss_neuroptics = new Item("Gauss Neuroptics", "Part obtained from Disruption on Sedna, rotation C.");
+const gauss_chassis = new Item("Gauss Chassis", "Part obtained from Disruption on Sedna, rotation C.");
+const gauss_systems = new Item("Gauss Systems", "Part obtained from Disruption on Sedna, rotation C.");
+const gauss = new Item("Gauss", "Warframe obtained from the blueprints.");
+const craft_gauss_neuroptics = new Recipe("Craft Gauss Neuroptics", "Craft Gauss Neuroptics from the blueprint.")
+    .addInput(gauss_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(argon_crystal, 1)
+    .addInput(rubedo, 1600)
+    .addInput(salvage, 6200)
+    .addInput(alloy_plate, 2950)
+    .addOutput(gauss_neuroptics, 1);
+const craft_gauss_chassis = new Recipe("Craft Gauss Chassis", "Craft Gauss Chassis from the blueprint.")
+    .addInput(gauss_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(radian_sentirum, 3)
+    .addInput(heart_nyth, 3)
+    .addInput(star_crimzian, 6)
+    .addInput(grokdrul, 55)
+    .addOutput(gauss_chassis, 1);
+const craft_gauss_systems = new Recipe("Craft Gauss Systems", "Craft Gauss Systems from the blueprint.")
+    .addInput(gauss_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(radiant_zodian, 3)
+    .addInput(marquise_thyst, 3)
+    .addInput(mytocardia_spore, 70)
+    .addInput(thermal_sludge, 85)
+    .addOutput(gauss_systems, 1);
+const craft_gauss = new Recipe("Craft Gauss", "Craft Gauss from the blueprints.")
+    .addInput(gauss_blueprint, 1)
+    .addInput(gauss_neuroptics, 1)
+    .addInput(gauss_chassis, 1)
+    .addInput(gauss_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 3)
+    .addOutput(gauss, 1);
+
+// grendel
+// bp market 35k
+// parts bp special mission
+
+const grendel_blueprint = new Item("Grendel Blueprint", "Blueprint obtained from the Market for 35,000 credits.");
+const buy_grendel_blueprint = new Recipe("Buy Grendel Blueprint", "Buy a Grendel Blueprint from the Market for 35,000 credits.")
+    .addInput(credits, 35000)
+    .addOutput(grendel_blueprint, 1);
+const grendel_neuroptics_blueprint = new Item("Grendel Neuroptics Blueprint", "Buy a Locator from arbitration vendor for 25 Vitus Essence, then use it.");
+const buy_grendel_neuroptics_blueprint = new Recipe("Buy Grendel Neuroptics Blueprint", "Buy a locator from the arbitration vendor for 25 Vitus Essence, then use it.")
+    .addInput(vitus_essence, 25)
+    .addOutput(grendel_neuroptics_blueprint, 1);
+const grendel_chassis_blueprint = new Item("Grendel Chassis Blueprint", "Buy a Locator from arbitration vendor for 25 Vitus Essence, then use it.");
+const buy_grendel_chassis_blueprint = new Recipe("Buy Grendel Chassis Blueprint", "Buy a locator from the arbitration vendor for 25 Vitus Essence, then use it.")
+    .addInput(vitus_essence, 25)
+    .addOutput(grendel_chassis_blueprint, 1);
+const grendel_systems_blueprint = new Item("Grendel Systems Blueprint", "Buy a Locator from arbitration vendor for 25 Vitus Essence, then use it.");
+const buy_grendel_systems_blueprint = new Recipe("Buy Grendel Systems Blueprint", "Buy a locator from the arbitration vendor for 25 Vitus Essence, then use it.")
+    .addInput(vitus_essence, 25)
+    .addOutput(grendel_systems_blueprint, 1);
+const grendel_neuroptics = new Item("Grendel Neuroptics", "Part obtained from the blueprint.");
+const craft_grendel_neuroptics = new Recipe("Craft Grendel Neuroptics", "Craft Grendel Neuroptics from the blueprint.")
+    .addInput(grendel_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(argon_crystal, 2)
+    .addInput(control_module, 5)
+    .addInput(ferrite, 3500)
+    .addInput(alloy_plate, 3800)
+    .addOutput(grendel_neuroptics, 1);
+const grendel_chassis = new Item("Grendel Chassis", "Part obtained from the blueprint.");
+const craft_grendel_chassis = new Recipe("Craft Grendel Chassis", "Craft Grendel Chassis from the blueprint.")
+    .addInput(grendel_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(condroc_wing, 25)
+    .addInput(kuaka_spinal_claw, 30)
+    .addInput(tralok_eyes, 20)
+    .addInput(murkray_liver, 15)
+    .addOutput(grendel_chassis, 1);
+const grendel_systems = new Item("Grendel Systems", "Part obtained from the blueprint.");
+const craft_grendel_systems = new Recipe("Craft Grendel Systems", "Craft Grendel Systems from the blueprint.")
+    .addInput(grendel_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(circuits, 1125)
+    .addInput(morphics, 10)
+    .addInput(fish_meat, 125)
+    .addInput(fish_oil, 100)
+    .addOutput(grendel_systems, 1);
+const grendel = new Item("Grendel", "Warframe obtained from the blueprints.");
+const craft_grendel = new Recipe("Craft Grendel", "Craft Grendel from the blueprints.")
+    .addInput(grendel_blueprint, 1)
+    .addInput(grendel_neuroptics, 1)
+    .addInput(grendel_chassis, 1)
+    .addInput(grendel_systems, 1)
+    .addInput(credits, 35000)
+    .addInput(orokin_cell, 3)
+    .addOutput(grendel, 1);
+
+// gyre
+// bp and parts bp zariman bounties
+
+const gyre_blueprint = new Item("Gyre Blueprint", "Blueprint obtained from Zariman Bounties.");
+const gyre_neuroptics_blueprint = new Item("Gyre Neuroptics Blueprint", "Blueprint obtained from Zariman Bounties.");
+const gyre_chassis_blueprint = new Item("Gyre Chassis Blueprint", "Blueprint obtained from Zariman Bounties.");
+const gyre_systems_blueprint = new Item("Gyre Systems Blueprint", "Blueprint obtained from Zariman Bounties.");
+const gyre_neuroptics = new Item("Gyre Neuroptics", "Part obtained from the blueprint.");
+const gyre_chassis = new Item("Gyre Chassis", "Part obtained from the blueprint.");
+const gyre_systems = new Item("Gyre Systems", "Part obtained from the blueprint.");
+const gyre = new Item("Gyre", "Warframe obtained from the blueprints.");
+const craft_gyre_neuroptics = new Recipe("Craft Gyre Neuroptics", "Craft Gyre Neuroptics from the blueprint.")
+    .addInput(gyre_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(neural_sensor, 6)
+    .addInput(thrax_plasm, 300)
+    .addInput(voidgel_orb, 60)
+    .addInput(plastids, 4500)
+    .addOutput(gyre_neuroptics, 1);
+const craft_gyre_chassis = new Recipe("Craft Gyre Chassis", "Craft Gyre Chassis from the blueprint.")
+    .addInput(gyre_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(morphics, 8)
+    .addInput(thrax_plasm, 500)
+    .addInput(entrati_lanthorn, 12)
+    .addInput(alloy_plate, 3300)
+    .addOutput(gyre_chassis, 1);
+const craft_gyre_systems = new Recipe("Craft Gyre Systems", "Craft Gyre Systems from the blueprint.")
+    .addInput(gyre_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(argon_crystal, 2)
+    .addInput(thrax_plasm, 300)
+    .addInput(voidplume_quill, 40)
+    .addInput(ferrite, 6500)
+    .addOutput(gyre_systems, 1);
+const craft_gyre = new Recipe("Craft Gyre", "Craft Gyre from the blueprints.")
+    .addInput(gyre_blueprint, 1)
+    .addInput(gyre_neuroptics, 1)
+    .addInput(gyre_chassis, 1)
+    .addInput(gyre_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 3)
+    .addOutput(gyre, 1);
+
+// harrow
+// bp chains of harrow quest
+// parts bp around the system
+
+const harrow_blueprint = new Item("Harrow Blueprint", "Blueprint obtained from the Chains of Harrow quest.");
+const harrow_neuroptics_blueprint = new Item("Harrow Neuroptics Blueprint", "Blueprint obtained somewhere...");
+const harrow_chassis_blueprint = new Item("Harrow Chassis Blueprint", "Blueprint obtained somewhere...");
+const harrow_systems_blueprint = new Item("Harrow Systems Blueprint", "Blueprint obtained somewhere...");
+const harrow_neuroptics = new Item("Harrow Neuroptics", "Part obtained from the blueprint.");
+const harrow_chassis = new Item("Harrow Chassis", "Part obtained from the blueprint.");
+const harrow_systems = new Item("Harrow Systems", "Part obtained from the blueprint.");
+const harrow = new Item("Harrow", "Warframe obtained from the blueprints.");
+const craft_harrow_neuroptics = new Recipe("Craft Harrow Neuroptics", "Craft Harrow Neuroptics from the blueprint.")
+    .addInput(harrow_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(rubedo, 1500)
+    .addInput(polymer_bundle, 4000)
+    .addInput(plastids, 2000)
+    .addInput(neural_sensor, 5)
+    .addOutput(harrow_neuroptics, 1);
+const craft_harrow_chassis = new Recipe("Craft Harrow Chassis", "Craft Harrow Chassis from the blueprint.")
+    .addInput(harrow_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(alloy_plate, 20000)
+    .addInput(salvage, 25000)
+    .addInput(oxium, 800)
+    .addInput(orokin_cell, 5)
+    .addOutput(harrow_chassis, 1);
+const craft_harrow_systems = new Recipe("Craft Harrow Systems", "Craft Harrow Systems from the blueprint.")
+    .addInput(harrow_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(circuits, 2500)
+    .addInput(cryotic, 100)
+    .addInput(ferrite, 25000)
+    .addInput(control_module, 15)
+    .addOutput(harrow_systems, 1);
+const craft_harrow = new Recipe("Craft Harrow", "Craft Harrow from the blueprints.")
+    .addInput(harrow_blueprint, 1)
+    .addInput(harrow_neuroptics, 1)
+    .addInput(harrow_chassis, 1)
+    .addInput(harrow_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(kuva, 2000)
+    .addOutput(harrow, 1);
+
+// hildryn
+// bp little duck 5k
+// parts bp exploiter orb
+
+const hildryn_blueprint = new Item("Hildryn Blueprint", "Blueprint obtained from Little Duck in Fortuna for 5,000 standing.");
+const buy_hildryn_blueprint = new Recipe("Buy Hildryn Blueprint", "Buy a Hildryn Blueprint from Little Duck in Fortuna for 5,000 standing.")
+    .addInput(vox_solaris, 5000)
+    .addOutput(hildryn_blueprint, 1);
+const hildryn_neuroptics_blueprint = new Item("Hildryn Neuroptics Blueprint", "Blueprint obtained from the Exploiter Orb.");
+const hildryn_chassis_blueprint = new Item("Hildryn Chassis Blueprint", "Blueprint obtained from the Exploiter Orb.");
+const hildryn_systems_blueprint = new Item("Hildryn Systems Blueprint", "Blueprint obtained from the Exploiter Orb.");
+const hildryn_neuroptics = new Item("Hildryn Neuroptics", "Part obtained from the blueprint.");
+const hildryn_chassis = new Item("Hildryn Chassis", "Part obtained from the blueprint.");
+const hildryn_systems = new Item("Hildryn Systems", "Part obtained from the blueprint.");
+const hildryn = new Item("Hildryn", "Warframe obtained from the blueprints.");
+const craft_hildryn_neuroptics = new Recipe("Craft Hildryn Neuroptics", "Craft Hildryn Neuroptics from the blueprint.")
+    .addInput(hildryn_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(lazulite_toroid, 2)
+    .addInput(argon_crystal, 1)
+    .addInput(mytocardia_spore, 85)
+    .addInput(circuits, 1600)
+    .addOutput(hildryn_neuroptics, 1);
+const craft_hildryn_chassis = new Recipe("Craft Hildryn Chassis", "Craft Hildryn Chassis from the blueprint.")
+    .addInput(hildryn_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(lazulite_toroid, 2)
+    .addInput(nitain, 2)
+    .addInput(thermal_sludge, 90)
+    .addInput(rubedo, 2300)
+    .addOutput(hildryn_chassis, 1);
+const craft_hildryn_systems = new Recipe("Craft Hildryn Systems", "Craft Hildryn Systems from the blueprint.")
+    .addInput(hildryn_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(lazulite_toroid, 2)
+    .addInput(tellurium, 2)
+    .addInput(gorgaricus_spore, 95)
+    .addInput(plastids, 1500)
+    .addOutput(hildryn_systems, 1);
+const craft_hildryn = new Recipe("Craft Hildryn", "Craft Hildryn from the blueprints.")
+    .addInput(hildryn_blueprint, 1)
+    .addInput(hildryn_neuroptics, 1)
+    .addInput(hildryn_chassis, 1)
+    .addInput(hildryn_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 3)
+    .addOutput(hildryn, 1);
+
+// hydroid
+// bp market 50k
+// parts bp vay hek assassination
+
+const hydroid_blueprint = new Item("Hydroid Blueprint", "Blueprint obtained from the Market for 50,000 credits.");
+const buy_hydroid_blueprint = new Recipe("Buy Hydroid Blueprint", "Buy a Hydroid Blueprint from the Market for 50,000 credits.")
+    .addInput(credits, 50000)
+    .addOutput(hydroid_blueprint, 1);
+const hydroid_neuroptics_blueprint = new Item("Hydroid Neuroptics Blueprint", "Blueprint obtained from the Vay Hek assassination mission.");
+const hydroid_chassis_blueprint = new Item("Hydroid Chassis Blueprint", "Blueprint obtained from the Vay Hek assassination mission.");
+const hydroid_systems_blueprint = new Item("Hydroid Systems Blueprint", "Blueprint obtained from the Vay Hek assassination mission.");
+const hydroid_neuroptics = new Item("Hydroid Neuroptics", "Part obtained from the blueprint.");
+const hydroid_chassis = new Item("Hydroid Chassis", "Part obtained from the blueprint.");
+const hydroid_systems = new Item("Hydroid Systems", "Part obtained from the blueprint.");
+const hydroid = new Item("Hydroid", "Warframe obtained from the blueprints.");
+const craft_hydroid_neuroptics = new Recipe("Craft Hydroid Neuroptics", "Craft Hydroid Neuroptics from the blueprint.")
+    .addInput(hydroid_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(alloy_plate, 150)
+    .addInput(control_module, 1)
+    .addInput(polymer_bundle, 150)
+    .addInput(argon_crystal, 2)
+    .addOutput(hydroid_neuroptics, 1);
+const craft_hydroid_chassis = new Recipe("Craft Hydroid Chassis", "Craft Hydroid Chassis from the blueprint.")
+    .addInput(hydroid_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(argon_crystal, 2)
+    .addInput(polymer_bundle, 1000)
+    .addInput(rubedo, 300)
+    .addInput(nano_spores, 1200)
+    .addOutput(hydroid_chassis, 1);
+const craft_hydroid_systems = new Recipe("Craft Hydroid Systems", "Craft Hydroid Systems from the blueprint.")
+    .addInput(hydroid_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(orokin_cell, 1)
+    .addInput(gallium, 4)
+    .addInput(polymer_bundle, 500)
+    .addInput(alloy_plate, 220)
+    .addOutput(hydroid_systems, 1);
+const craft_hydroid = new Recipe("Craft Hydroid", "Craft Hydroid from the blueprints.")
+    .addInput(hydroid_blueprint, 1)
+    .addInput(hydroid_neuroptics, 1)
+    .addInput(hydroid_chassis, 1)
+    .addInput(hydroid_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 1)
+    .addOutput(hydroid, 1);
+
+// inaros
+
+const sands_of_inaros = new Item("Sands of Inaros", "Quest obtained from Baro Ki'Teer for 100 ducats and 25,000 credits.");
+const buy_sands_of_inaros = new Recipe("Buy Sands of Inaros", "Buy the Sands of Inaros quest from Baro Ki'Teer for 100 ducats and 25,000 credits.")
+    .addInput(ducats, 100)
+    .addInput(credits, 25000)
+    .addOutput(sands_of_inaros, 1);
+const inaros_blueprint = new Item("Inaros Blueprint", "Blueprint obtained from the Sands of Inaros quest.");
+const inaros_neuroptics_blueprint = new Item("Inaros Neuroptics Blueprint", "Blueprint obtained from the Sands of Inaros quest.");
+const inaros_chassis_blueprint = new Item("Inaros Chassis Blueprint", "Blueprint obtained from the Sands of Inaros quest.");
+const inaros_systems_blueprint = new Item("Inaros Systems Blueprint", "Blueprint obtained from the Sands of Inaros quest.");
+const do_the_sands_of_inaros_quest = new Recipe("Do the Sands of Inaros Quest", "Do the Sands of Inaros quest to get the blueprints.")
+    .addInput(sands_of_inaros, 1)
+    .addOutput(inaros_blueprint, 1)
+    .addOutput(inaros_neuroptics_blueprint, 1)
+    .addOutput(inaros_chassis_blueprint, 1)
+    .addOutput(inaros_systems_blueprint, 1);
+const inaros_neuroptics = new Item("Inaros Neuroptics", "Part obtained from the blueprint.");
+const inaros_chassis = new Item("Inaros Chassis", "Part obtained from the blueprint.");
+const inaros_systems = new Item("Inaros Systems", "Part obtained from the blueprint.");
+const inaros = new Item("Inaros", "Warframe obtained from the blueprints.");
+const craft_inaros_neuroptics = new Recipe("Craft Inaros Neuroptics", "Craft Inaros Neuroptics from the blueprint.")
+    .addInput(inaros_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(alloy_plate, 1500)
+    .addInput(nitain, 2)
+    .addInput(polymer_bundle, 350)
+    .addInput(plastids, 500)
+    .addOutput(inaros_neuroptics, 1);
+const craft_inaros_chassis = new Recipe("Craft Inaros Chassis", "Craft Inaros Chassis from the blueprint.")
+    .addInput(inaros_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(neurodes, 3)
+    .addInput(nano_spores, 1000)
+    .addInput(plastids, 300)
+    .addInput(oxium, 100)
+    .addOutput(inaros_chassis, 1);
+const craft_inaros_systems = new Recipe("Craft Inaros Systems", "Craft Inaros Systems from the blueprint.")
+    .addInput(inaros_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(argon_crystal, 2)
+    .addInput(polymer_bundle, 300)
+    .addInput(nano_spores, 1600)
+    .addInput(circuits, 500)
+    .addOutput(inaros_systems, 1);
+const craft_inaros = new Recipe("Craft Inaros", "Craft Inaros from the blueprints.")
+    .addInput(inaros_blueprint, 1)
+    .addInput(inaros_neuroptics, 1)
+    .addInput(inaros_chassis, 1)
+    .addInput(inaros_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 1)
+    .addOutput(inaros, 1);
+
+// ivara
+// bp and parts bp spy missions
+
+const ivara_blueprint = new Item("Ivara Blueprint", "Blueprint obtained from spy missions.");
+const ivara_neuroptics_blueprint = new Item("Ivara Neuroptics Blueprint", "Blueprint obtained from spy missions.");
+const ivara_chassis_blueprint = new Item("Ivara Chassis Blueprint", "Blueprint obtained from spy missions.");
+const ivara_systems_blueprint = new Item("Ivara Systems Blueprint", "Blueprint obtained from spy missions.");
+const ivara_neuroptics = new Item("Ivara Neuroptics", "Part obtained from spy missions.");
+const ivara_chassis = new Item("Ivara Chassis", "Part obtained from spy missions.");
+const ivara_systems = new Item("Ivara Systems", "Part obtained from spy missions.");
+const ivara = new Item("Ivara", "Warframe obtained from spy missions.");
+const craft_ivara_neuroptics = new Recipe("Craft Ivara Neuroptics", "Craft Ivara Neuroptics from the blueprint.")
+    .addInput(ivara_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(neurodes, 5)
+    .addInput(plastids, 800)
+    .addInput(polymer_bundle, 2600)
+    .addInput(argon_crystal, 2)
+    .addOutput(ivara_neuroptics, 1);
+const craft_ivara_chassis = new Recipe("Craft Ivara Chassis", "Craft Ivara Chassis from the blueprint.")
+    .addInput(ivara_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(morphics, 5)
+    .addInput(cryotic, 2000)
+    .addInput(rubedo, 700)
+    .addInput(nitain, 4)
+    .addOutput(ivara_chassis, 1);
+const craft_ivara_systems = new Recipe("Craft Ivara Systems", "Craft Ivara Systems from the blueprint.")
+    .addInput(ivara_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(control_module, 5)
+    .addInput(rubedo, 1000)
+    .addInput(nitain, 5)
+    .addInput(argon_crystal, 1)
+    .addOutput(ivara_systems, 1);
+const craft_ivara = new Recipe("Craft Ivara", "Craft Ivara from the blueprints.")
+    .addInput(ivara_blueprint, 1)
+    .addInput(ivara_neuroptics, 1)
+    .addInput(ivara_chassis, 1)
+    .addInput(ivara_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 1)
+    .addOutput(ivara, 1);
+
+// khora
+// bp and parts bp sanctuary onslaught
+
+const khora_blueprint = new Item("Khora Blueprint", "Blueprint obtained from sanctuary onslaught.");
+const khora_neuroptics_blueprint = new Item("Khora Neuroptics Blueprint", "Blueprint obtained from sanctuary onslaught.");
+const khora_chassis_blueprint = new Item("Khora Chassis Blueprint", "Blueprint obtained from sanctuary onslaught.");
+const khora_systems_blueprint = new Item("Khora Systems Blueprint", "Blueprint obtained from sanctuary onslaught.");
+const khora_neuroptics = new Item("Khora Neuroptics", "Part obtained from sanctuary onslaught.");
+const khora_chassis = new Item("Khora Chassis", "Part obtained from sanctuary onslaught.");
+const khora_systems = new Item("Khora Systems", "Part obtained from sanctuary onslaught.");
+const khora = new Item("Khora", "Warframe obtained from sanctuary onslaught.");
+const craft_khora_neuroptics = new Recipe("Craft Khora Neuroptics", "Craft Khora Neuroptics from the blueprint.")
+    .addInput(khora_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(kavat_genetic_code, 2)
+    .addInput(kuaka_spinal_claw, 35)
+    .addInput(polymer_bundle, 1500)
+    .addInput(salvage, 16000)
+    .addOutput(khora_neuroptics, 1);
+const craft_khora_chassis = new Recipe("Craft Khora Chassis", "Craft Khora Chassis from the blueprint.")
+    .addInput(khora_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(kavat_genetic_code, 5)
+    .addInput(iradite, 65)
+    .addInput(alloy_plate, 12250)
+    .addInput(rubedo, 4300)
+    .addOutput(khora_chassis, 1);
+const craft_khora_systems = new Recipe("Craft Khora Systems", "Craft Khora Systems from the blueprint.")
+    .addInput(khora_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(kavat_genetic_code, 2)
+    .addInput(plastids, 1000)
+    .addInput(circuits, 2600)
+    .addInput(ferrite, 11500)
+    .addOutput(khora_systems, 1);   
+const craft_khora = new Recipe("Craft Khora", "Craft Khora from the blueprints.")
+    .addInput(khora_blueprint, 1)
+    .addInput(khora_neuroptics, 1)
+    .addInput(khora_chassis, 1)
+    .addInput(khora_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 3)
+    .addOutput(khora, 1);
+
+// lavos
+// bp and parts bp father 5k standing
+
+const lavos_blueprint = new Item("Lavos Blueprint", "Blueprint obtained from Father for 5,000 standing.");
+const lavos_neuroptics_blueprint = new Item("Lavos Neuroptics Blueprint", "Blueprint obtained from Father for 5,000 standing.");
+const lavos_chassis_blueprint = new Item("Lavos Chassis Blueprint", "Blueprint obtained from Father for 5,000 standing.");
+const lavos_systems_blueprint = new Item("Lavos Systems Blueprint", "Blueprint obtained from Father for 5,000 standing.");
+const buy_lavos_blueprint = new Recipe("Buy Lavos Blueprint", "Buy a Lavos Blueprint from Father for 5,000 standing.")
+    .addInput(entrati, 5000)
+    .addOutput(lavos_blueprint, 1);
+const buy_lavos_neuroptics_blueprint = new Recipe("Buy Lavos Neuroptics Blueprint", "Buy a Lavos Neuroptics Blueprint from Father for 5,000 standing.")
+    .addInput(entrati, 5000)
+    .addOutput(lavos_neuroptics_blueprint, 1);
+const buy_lavos_chassis_blueprint = new Recipe("Buy Lavos Chassis Blueprint", "Buy a Lavos Chassis Blueprint from Father for 5,000 standing.")
+    .addInput(entrati, 5000)
+    .addOutput(lavos_chassis_blueprint, 1);
+const buy_lavos_systems_blueprint = new Recipe("Buy Lavos Systems Blueprint", "Buy a Lavos Systems Blueprint from Father for 5,000 standing.")
+    .addInput(entrati, 5000)
+    .addOutput(lavos_systems_blueprint, 1);
+const lavos_neuroptics = new Item("Lavos Neuroptics", "Part obtained from Father for 5,000 standing.");
+const lavos_chassis = new Item("Lavos Chassis", "Part obtained from Father for 5,000 standing.");
+const lavos_systems = new Item("Lavos Systems", "Part obtained from Father for 5,000 standing.");
+const lavos = new Item("Lavos", "Warframe obtained from Father for 5,000 standing.");
+const craft_lavos_neuroptics = new Recipe("Craft Lavos Neuroptics", "Craft Lavos Neuroptics from the blueprint.")
+    .addInput(lavos_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(trapezium_xenorhast, 6)
+    .addInput(titanium, 2000)
+    .addInput(oxium, 750)
+    .addInput(rubedo, 2750)
+    .addOutput(lavos_neuroptics, 1);
+const craft_lavos_chassis = new Recipe("Craft Lavos Chassis", "Craft Lavos Chassis from the blueprint.")
+    .addInput(lavos_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(argon_crystal, 2)
+    .addInput(nitain, 5)
+    .addInput(cryotic, 1500)
+    .addInput(polymer_bundle, 5500)
+    .addOutput(lavos_chassis, 1);
+const craft_lavos_systems = new Recipe("Craft Lavos Systems", "Craft Lavos Systems from the blueprint.")
+    .addInput(lavos_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(cabochon_embolos, 6)
+    .addInput(nano_spores, 5500)
+    .addInput(hexenon, 550)
+    .addInput(circuits, 3000)
+    .addOutput(lavos_systems, 1);
+const craft_lavos = new Recipe("Craft Lavos", "Craft Lavos from the blueprints.")
+    .addInput(lavos_blueprint, 1)
+    .addInput(lavos_neuroptics, 1)
+    .addInput(lavos_chassis, 1)
+    .addInput(lavos_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 3)
+    .addOutput(lavos, 1);
+
+// limbo
+// bp market 35k
+// parts bp limbo theorem quest
+
+const limbo_blueprint = new Item("Limbo Blueprint", "Blueprint obtained from the Market for 35,000 credits.");
+const buy_limbo_blueprint = new Recipe("Buy Limbo Blueprint", "Buy a Limbo Blueprint from the Market for 35,000 credits.")
+    .addInput(credits, 35000)
+    .addOutput(limbo_blueprint, 1);
+const limbo_neuroptics_blueprint = new Item("Limbo Neuroptics Blueprint", "Blueprint obtained from the Limbo Theorem quest.");
+const limbo_chassis_blueprint = new Item("Limbo Chassis Blueprint", "Blueprint obtained from the Limbo Theorem quest.");
+const limbo_systems_blueprint = new Item("Limbo Systems Blueprint", "Blueprint obtained from the Limbo Theorem quest.");
+const limbo_neuroptics = new Item("Limbo Neuroptics", "Part obtained from the Limbo Theorem quest.");
+const limbo_chassis = new Item("Limbo Chassis", "Part obtained from the Limbo Theorem quest.");
+const limbo_systems = new Item("Limbo Systems", "Part obtained from the Limbo Theorem quest.");
+const limbo = new Item("Limbo", "Warframe obtained from the Limbo Theorem quest.");
+const craft_limbo_neuroptics = new Recipe("Craft Limbo Neuroptics", "Craft Limbo Neuroptics from the blueprint.")
+    .addInput(limbo_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(alloy_plate, 150)
+    .addInput(neurodes, 2)
+    .addInput(polymer_bundle, 150)
+    .addInput(rubedo, 500)
+    .addOutput(limbo_neuroptics, 1);
+const craft_limbo_chassis = new Recipe("Craft Limbo Chassis", "Craft Limbo Chassis from the blueprint.")
+    .addInput(limbo_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(neural_sensor, 1)
+    .addInput(ferrite, 1000)
+    .addInput(rubedo, 300)
+    .addInput(argon_crystal, 1)
+    .addOutput(limbo_chassis, 1);
+const craft_limbo_systems = new Recipe("Craft Limbo Systems", "Craft Limbo Systems from the blueprint.")
+    .addInput(limbo_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(control_module, 1)
+    .addInput(morphics, 3)
+    .addInput(salvage, 500)
+    .addInput(plastids, 220)
+    .addOutput(limbo_systems, 1);
+const craft_limbo = new Recipe("Craft Limbo", "Craft Limbo from the blueprints.")
+    .addInput(limbo_blueprint, 1)
+    .addInput(limbo_neuroptics, 1)
+    .addInput(limbo_chassis, 1)
+    .addInput(limbo_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 3)
+    .addOutput(limbo, 1);
+
+// loki
+// bp market 35k
+// parts bp hyena pack
+
+const loki_blueprint = new Item("Loki Blueprint", "Blueprint obtained from the Market for 35,000 credits.");
+const buy_loki_blueprint = new Recipe("Buy Loki Blueprint", "Buy a Loki Blueprint from the Market for 35,000 credits.")
+    .addInput(credits, 35000)
+    .addOutput(loki_blueprint, 1);
+const loki_neuroptics_blueprint = new Item("Loki Neuroptics Blueprint", "Blueprint obtained from the Hyena Pack.");
+const loki_chassis_blueprint = new Item("Loki Chassis Blueprint", "Blueprint obtained from the Hyena Pack.");
+const loki_systems_blueprint = new Item("Loki Systems Blueprint", "Blueprint obtained from the Hyena Pack.");
+const loki_neuroptics = new Item("Loki Neuroptics", "Part obtained from the Hyena Pack.");
+const loki_chassis = new Item("Loki Chassis", "Part obtained from the Hyena Pack.");
+const loki_systems = new Item("Loki Systems", "Part obtained from the Hyena Pack.");
+const loki = new Item("Loki", "Warframe obtained from the Hyena Pack.");
+const craft_loki_neuroptics = new Recipe("Craft Loki Neuroptics", "Craft Loki Neuroptics from the blueprint.")
+    .addInput(loki_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(alloy_plate, 150)
+    .addInput(neural_sensor, 1)
+    .addInput(polymer_bundle, 150)
+    .addInput(rubedo, 500)
+    .addOutput(loki_neuroptics, 1);
+const craft_loki_chassis = new Recipe("Craft Loki Chassis", "Craft Loki Chassis from the blueprint.")
+    .addInput(loki_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(morphics, 1)
+    .addInput(ferrite, 1000)
+    .addInput(rubedo, 300)
+    .addOutput(loki_chassis, 1);
+const craft_loki_systems = new Recipe("Craft Loki Systems", "Craft Loki Systems from the blueprint.")
+    .addInput(loki_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(control_module, 1)
+    .addInput(morphics, 1)
+    .addInput(salvage, 500)
+    .addInput(plastids, 220)
+    .addOutput(loki_systems, 1);
+const craft_loki = new Recipe("Craft Loki", "Craft Loki from the blueprints.")
+    .addInput(loki_blueprint, 1)
+    .addInput(loki_neuroptics, 1)
+    .addInput(loki_chassis, 1)
+    .addInput(loki_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(orokin_cell, 1)
+    .addOutput(loki, 1);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
