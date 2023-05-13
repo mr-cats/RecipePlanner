@@ -7995,6 +7995,8 @@ const craft_caliban = new Recipe("Craft Caliban", "Craft Caliban from the bluepr
     .addInput(orokin_cell, 12)
     .addOutput(caliban, 1);
 
+// chr oma is at the bottom, under zephyr
+
 // citrine
 // bp and parts bp from mirror defense C rotation
 
@@ -10247,7 +10249,50 @@ const craft_zephyr = new Recipe("Craft Zephyr", "Craft Zephyr from the blueprint
     .addInput(orokin_cell, 1)
     .addOutput(zephyr, 1);
 
+// chroma
+// bp new strange quest
+// parts bp junctions
 
+const chroma_blueprint = new Item("Chroma Blueprint", "Blueprint obtained from the New Strange quest.");
+const chroma_neuroptics_blueprint = new Item("Chroma Neuroptics Blueprint", "Blueprint obtained from Uranus Junction.");
+const chroma_chassis_blueprint = new Item("Chroma Chassis Blueprint", "Blueprint obtained from Neptune Junction.");
+const chroma_systems_blueprint = new Item("Chroma Systems Blueprint", "Blueprint obtained from Pluto Junction.");
+const chroma_neuroptics = new Item("Chroma Neuroptics", "Part obtained from the Chroma Neuroptics Blueprint.");
+const chroma_chassis = new Item("Chroma Chassis", "Part obtained from the Chroma Chassis Blueprint.");
+const chroma_systems = new Item("Chroma Systems", "Part obtained from the Chroma Systems Blueprint.");
+const chroma = new Item("Chroma", "Warframe obtained from the Chroma Blueprint.");  
+const craft_chroma_neuroptics = new Recipe("Craft Chroma Neuroptics", "Craft Chroma Neuroptics from the blueprint.")
+    .addInput(chroma_neuroptics_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(plastids, 200)
+    .addInput(neural_sensor, 2)
+    .addInput(polymer_bundle, 350)
+    .addInput(ember_neuroptics, 1)
+    .addOutput(chroma_neuroptics, 1);
+const craft_chroma_chassis = new Recipe("Craft Chroma Chassis", "Craft Chroma Chassis from the blueprint.")
+    .addInput(chroma_chassis_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(neurodes, 2)
+    .addInput(salvage, 900)
+    .addInput(plastids, 50)
+    .addInput(frost_chassis, 1)
+    .addOutput(chroma_chassis, 1);
+const craft_chroma_systems = new Recipe("Craft Chroma Systems", "Craft Chroma Systems from the blueprint.")
+    .addInput(chroma_systems_blueprint, 1)
+    .addInput(credits, 15000)
+    .addInput(oxium, 400)
+    .addInput(argon_crystal, 2)
+    .addInput(neurodes, 1)
+    .addInput(saryn_systems, 1)
+    .addOutput(chroma_systems, 1);
+const craft_chroma = new Recipe("Craft Chroma", "Craft Chroma from the blueprints.")
+    .addInput(chroma_blueprint, 1)
+    .addInput(chroma_neuroptics, 1)
+    .addInput(chroma_chassis, 1)
+    .addInput(chroma_systems, 1)
+    .addInput(credits, 25000)
+    .addInput(volt_neuroptics, 1)
+    .addOutput(chroma, 1);
 
 
 
@@ -10457,3 +10502,7 @@ const do_the_archwing_quest = new Recipe("Do The Archwing Quest", "Do the Archwi
     .addOutput(veritux, 1);
 
 // finalize
+
+const warframe_handler = handler;
+
+export { warframe_handler };

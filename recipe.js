@@ -12,6 +12,7 @@ export class Recipe {
             item = item.name;
         }
         this.inputs.set(item, quantity);
+        Handler.getItem(item).isComponent = true;
         return this;
     }
 

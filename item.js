@@ -4,7 +4,8 @@ export class Item {
     constructor(name, desc) {
         this.name = name;
         this.desc = desc;
-        this.recipes = [];
+        this.recipes = []; // recipes that produce this item
+        this.isComponent = false; // whether this item is an input to a recipe
         Handler.addItem(name, this);
     }
 
