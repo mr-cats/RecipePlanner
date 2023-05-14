@@ -15,23 +15,30 @@ export class CountMap {
     constructor() {
         this.map = new Map();
     }
+    keys() {
+        return this.map.keys();
+    }
     addMax(key, quantity) {
-        if (this.map.has(key)) {
+        const had = this.map.has(key);
+        if (had) {
             this.map.get(key).addMax(quantity);
         } else {
             const progress = new Progress();
             progress.addMax(quantity);
             this.map.set(key, progress);
         }
+        return had;
     }
     addValue(key, quantity) {
-        if (this.map.has(key)) {
+        const had = this.map.has(key);
+        if (had) {
             this.map.get(key).addValue(quantity);
         } else {
             const progress = new Progress();
             progress.addValue(quantity);
             this.map.set(key, progress);
         }
+        return had;
     }
     getValue(key) {
         if (this.map.has(key)) {

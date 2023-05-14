@@ -12,6 +12,16 @@ body {
     line-height: 1.6;
 }
 
+.want-item-info {
+    left: 50%;
+    position: relative;
+    transform: translateY(-50px);
+}
+
+.hidden {
+    display: none;
+}
+
 #info-container {
     display: flex;
     flex-direction: column;
@@ -26,6 +36,7 @@ body {
 
 #planner > * {
     width: 25%;
+    height: 100%;
     margin: 4px;
     border: 2px solid;
     border-radius: 5px;

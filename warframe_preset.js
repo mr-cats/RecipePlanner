@@ -477,7 +477,8 @@ const craft_venerdo_alloy = new Recipe("Craft Venerdo Alloy", "Reusable Blueprin
     .addInput(gallium, 2)
     .addOutput(venerdo_alloy, 20);
 
-// fish
+// the fishing section
+// -------------------
 
 const amniophysi_small = new Item("Amniophysi (Small)", "A fish found in the Cambion Drift.");
 const amniophysi_medium = new Item("Amniophysi (Medium)", "A fish found in the Cambion Drift.");
@@ -10508,6 +10509,9 @@ const do_the_archwing_quest = new Recipe("Do The Archwing Quest", "Do the Archwi
     .addOutput(veritux, 1);
 
 // finalize
+
+handler.items = Handler.items;
+handler.recipes = Handler.recipes;
 
 const warframe_handler = handler;
 
