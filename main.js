@@ -5,7 +5,8 @@ const items = Array.from(warframe_handler.items.keys());
 const itemMap = warframe_handler.items;
 const recipes = Array.from(warframe_handler.recipes.keys());
 const recipeMap = warframe_handler.recipes;
-const topLevelItems = items.filter(item => !itemMap.get(item).isComponent);
+const topLevelItems = items.filter(item => !itemMap.get(item).isComponent)
+                           .filter(item => !itemMap.get(item).isBase());
 
 /*
 Displays:
@@ -55,8 +56,9 @@ window.onload = function () {
     }
 }
 function debug() {
-    addToWant("Fish Meat", 1);
-    addToWant("Ash", 1);
+    for (const item of topLevelItems) {
+        addToWant(item, 1);
+    }
 }
 
 // make a div for a want item that gets appended to want-container
@@ -72,9 +74,9 @@ function makeWantItem(itemName) {
     const infoDiv = document.createElement("div");
     infoDiv.classList.add("want-item-info");
     infoDiv.classList.add("hidden");
-    infoDiv.innerHTML = `
-        <div class="want-item-desc">${item.desc}</div>
-    `;
+    infoDiv.innerHTML = ``;
+        //`<div class="want-item-desc">${item.desc}</div>`;
+    
     for (const recipe of item.recipes) {
         const recipeDiv = document.createElement("div");
         recipeDiv.innerHTML = `${recipe.name}`;
@@ -111,22 +113,33 @@ function makeTodoItem(recipeName) {
     return div;
 }
 
+function makeNeedItem(itemName) {
+    const item = itemMap.get(itemName);
+    const div = document.createElement("div");
+    div.classList.add("need-item");
+    div.innerHTML = `
+        <div class="need-item-name">${itemName}</div>
+        <div class="need-item-value">${need.getValue(itemName)} / ${need.getMax(itemName)}</div>
+    `;
+    return div;
+}
+
+function makeHaveItem(itemName) {
+    const item = itemMap.get(itemName);
+    const div = document.createElement("div");
+    div.classList.add("have-item");
+    div.innerHTML = `
+        <div class="have-item-name">${itemName}</div>
+        <div class="have-item-value">${have.getValue(itemName)}</div>
+    `;
+    return div;
+}
+
 function makeItemHtml(itemName) {
     const item = itemMap.get(itemName);
     const div = document.createElement("div");
     div.classList.add("item");
     return div;
-}
-
-// Add item to want
-function addToWant(itemName, quantity) {
-    const had = want.addMax(itemName, quantity);
-    if (had) {
-        updateWant();
-        return;
-    }
-    const wantSection = document.getElementById("want-list");
-    wantSection.appendChild(makeWantItem(itemName));
 }
 
 function updateWant() {
@@ -157,13 +170,75 @@ function updateTodo() {
     }
 }
 
+function updateNeed() {
+    const needSection = document.getElementById("need-list");
+    for (const needDiv of needSection.getElementsByClassName("need-item")) {
+        const itemName = needDiv.getElementsByClassName("need-item-name")[0].innerHTML;
+        needDiv.getElementsByClassName("need-item-value")[0].innerHTML = `${need.getValue(itemName)} / ${need.getMax(itemName)}`;
+        const hidden = need.getMax(itemName) <= need.getValue(itemName);
+        if (hidden) {
+            needDiv.classList.add("hidden");
+        } else {
+            needDiv.classList.remove("hidden");
+        }
+    }
+}
+
+function updateHave() {
+    const haveSection = document.getElementById("have-list");
+    for (const haveDiv of haveSection.getElementsByClassName("have-item")) {
+        const itemName = haveDiv.getElementsByClassName("have-item-name")[0].innerHTML;
+        haveDiv.getElementsByClassName("have-item-value")[0].innerHTML = `${have.getValue(itemName)} / ${have.getMax(itemName)}`;
+    }
+}
+
+// Add item to want
+function addToWant(itemName, quantity) {
+    const had = want.addMax(itemName, quantity);
+    if (had) {
+        updateWant();
+        return;
+    }
+    const wantSection = document.getElementById("want-list");
+    wantSection.appendChild(makeWantItem(itemName));
+}
+
 // Add item to have
 function addToHave(itemName, quantity) {
-    have.addValue(itemName, quantity);
+    const had = have.addValue(itemName, quantity);
+    if (had) {
+        updateHave();
+        return;
+    }
+    const haveSection = document.getElementById("have-list");
+    haveSection.appendChild(makeHaveItem(itemName));
+}
+
+function addToNeed(itemName, quantity) {
+    const had = need.addMax(itemName, quantity);
+    if (had) {
+        updateNeed();
+        return;
+    }
+    const needSection = document.getElementById("need-list");
+    needSection.appendChild(makeNeedItem(itemName));
 }
 
 // Perform recipe from todo
 function performRecipe(recipe, times) {
+    let deficit = "";
+    for (const [itemName, quantity] of recipe.inputs) {
+        if (have.getValue(itemName) < quantity * times) {
+            deficit += `Missing: ${itemName}: ${quantity * times - have.getValue(itemName)}\n`;
+        }
+    }
+    /*
+    if (deficit != "") {
+        alert(deficit);
+        return;
+    }
+    */
+
     todo.addValue(recipe.name, times);
     for (const [itemName, quantity] of recipe.inputs) {
         need.addValue(itemName, quantity * times);
@@ -173,13 +248,15 @@ function performRecipe(recipe, times) {
         addToHave(itemName, quantity * times);
     }
     updateTodo();
+    updateNeed();
+    updateHave();
 }
 
 // Add recipe to todo from want
 function addToTodo(recipe, quantity) {
     const had = todo.addMax(recipe.name, quantity);
     for (const [itemName, count] of recipe.inputs) {
-        need.addMax(itemName, quantity * count);
+        addToNeed(itemName, quantity * count);
         if (!itemMap.get(itemName).isBase()) {
             addToWant(itemName, quantity * count);
         }

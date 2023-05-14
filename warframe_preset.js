@@ -1202,7 +1202,7 @@ const craft_aegrit = new Recipe("Craft Aegrit", "Craft an Aegrit from the bluepr
 
 // aeolak
 
-const aeolak_stock_blueprint = new Item("Aeolak Stock", "Rare drop from Void FLood C rotations.");
+const aeolak_stock_blueprint = new Item("Aeolak Stock Blueprint", "Rare drop from Void FLood C rotations.");
 const aeolak_stock = new Item("Aeolak Stock", "Rare drop from Void FLood C rotations.");
 const craft_aeolak_stock = new Recipe("Craft Aeolak Stock", "Craft an Aeolak Stock from the blueprint.")
     .addInput(credits, 15000)
@@ -1212,7 +1212,7 @@ const craft_aeolak_stock = new Recipe("Craft Aeolak Stock", "Craft an Aeolak Sto
     .addInput(orokin_cell, 5)
     .addInput(aeolak_stock_blueprint, 1)
     .addOutput(aeolak_stock, 1);
-const aeolak_barrel_blueprint = new Item("Aeolak Barrel", "Rare drop from Void Cascade C rotations.");
+const aeolak_barrel_blueprint = new Item("Aeolak Barrel Blueprint", "Rare drop from Void Cascade C rotations.");
 const aeolak_barrel = new Item("Aeolak Barrel", "Rare drop from Void Cascade C rotations.");
 const craft_aeolak_barrel = new Recipe("Craft Aeolak Barrel", "Craft an Aeolak Barrel from the blueprint.")
     .addInput(credits, 15000)
@@ -1222,7 +1222,7 @@ const craft_aeolak_barrel = new Recipe("Craft Aeolak Barrel", "Craft an Aeolak B
     .addInput(entrati_lanthorn, 5)
     .addInput(aeolak_barrel_blueprint, 1)
     .addOutput(aeolak_barrel, 1);
-const aeolak_receiver_blueprint = new Item("Aeolak Receiver", "Rare drop from Void Flood C rotations.");
+const aeolak_receiver_blueprint = new Item("Aeolak Receiver Blueprint", "Rare drop from Void Flood C rotations.");
 const aeolak_receiver = new Item("Aeolak Receiver", "Rare drop from Void Flood C rotations.");
 const craft_aeolak_receiver = new Recipe("Craft Aeolak Receiver", "Craft an Aeolak Receiver from the blueprint.")
     .addInput(credits, 15000)
